@@ -7,3 +7,4 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+//funciones (filter-sort-compute)
