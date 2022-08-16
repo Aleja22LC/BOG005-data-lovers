@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+    
+}
+
+.header{
+    background-color: #ffff;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+   display: flex;
+   justify-content: space-between;
+   max-width: 992px;
+   margin: 0 auto; 
+}
+
+.nav-link{
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.item-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+    
+}
+
+.item-link:hover{
+    background-color: rgb(199, 198, 198);
+    transition: 0.5s;
+}
+
+.nav-toggle{
+    color: black;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;        
+    }
+    
+    .header{
+        height: 60px;
+    }
+    
+    .nav{
+       display: flex;
+       justify-content: space-between;
+       max-width: 992px;
+       margin: 0 auto; 
+    }
+    
+    .nav-link{
+        color: black;
+        text-decoration: none;
+    }
+    
+    .logo {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 0 40px;
+        line-height: 80px;
+    }
+    
+    .nav-menu{
+        display: flex;
+        margin-right: 40px;
+        list-style: none;
+    }
+    
+    .item {
+        font-size: 18px;
+        margin: 0 10px;
+        line-height: 80px;
+        text-transform: uppercase;
+        width: max-content;
+    }
+    
+    .item-link{
+        padding: 8px 12px;
+        border-radius: 3px;
+        
+    }
+    
+    .item-link:hover{
+        background-color: rgb(199, 198, 198);
+        transition: 0.5s;
+    }
+    
+    .nav-toggle{
+        color: black;
+        background: none;
+        border: none;
+        font-size: 30px;
+        padding: 0 20px;
+        line-height: 60px;
+    
+        display: none;
+    }
+}
