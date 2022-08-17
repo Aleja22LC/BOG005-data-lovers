@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: border-box;
 }
@@ -6,10 +6,10 @@
 body {
     font-family: sans-serif;
     padding: 90px 20px 0;
-    
+    background-image: url(img/fondoazul.png);
 }
 
-.header{
+.header {
     background-color: #ffff;
     height: 80px;
     position: fixed;
@@ -18,26 +18,19 @@ body {
     left: 0;
 }
 
-.nav{
-   display: flex;
-   justify-content: space-between;
-   max-width: 992px;
-   margin: 0 auto; 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
 }
 
-.nav-link{
+.nav-link {
     color: black;
     text-decoration: none;
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0 40px;
-    line-height: 80px;
-}
-
-.nav-menu{
+.nav-menu {
     display: flex;
     margin-right: 40px;
     list-style: none;
@@ -51,89 +44,100 @@ body {
     width: max-content;
 }
 
-.item-link{
+.item-link {
     padding: 8px 12px;
     border-radius: 3px;
-    
+
 }
 
-.item-link:hover{
-    background-color: rgb(199, 198, 198);
+.item-link:hover,
+.item-link-active {
+    background-color: rgb(253, 253, 253);
     transition: 0.5s;
 }
 
-.nav-toggle{
+.nav-toggle {
     color: black;
     background: none;
     border: none;
     font-size: 30px;
     padding: 0 20px;
     line-height: 60px;
+    cursor: pointer;
 
     display: none;
 }
 
+.nav-img {
+    height: 80px;
+    width: 600px;
+    position: relative;
+    
+}
+
+/* dseñ de dispositivo movil menos de 768px */
 @media (max-width: 768px) {
     body {
-        padding-top: 70px;        
+        padding-top: 70px;
     }
-    
-    .header{
+
+    .header {
         height: 60px;
     }
-    
-    .nav{
-       display: flex;
-       justify-content: space-between;
-       max-width: 992px;
-       margin: 0 auto; 
-    }
-    
-    .nav-link{
-        color: black;
-        text-decoration: none;
-    }
-    
+
     .logo {
-        font-size: 30px;
-        font-weight: bold;
-        padding: 0 40px;
-        line-height: 80px;
-    }
-    
-    .nav-menu{
-        display: flex;
-        margin-right: 40px;
-        list-style: none;
-    }
-    
-    .item {
-        font-size: 18px;
-        margin: 0 10px;
-        line-height: 80px;
-        text-transform: uppercase;
-        width: max-content;
-    }
-    
-    .item-link{
-        padding: 8px 12px;
-        border-radius: 3px;
-        
-    }
-    
-    .item-link:hover{
-        background-color: rgb(199, 198, 198);
-        transition: 0.5s;
-    }
-    
-    .nav-toggle{
-        color: black;
-        background: none;
-        border: none;
-        font-size: 30px;
+        font-size: 25px;
         padding: 0 20px;
         line-height: 60px;
-    
-        display: none;
     }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #a3a8ad;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100%-60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .item {
+        line-height: 70px;
+    }
+
+    .item-link {
+        padding: 8px 12px;
+        border-radius: 3px;
+    }
+
+    .item-link:hover,
+    .item-link-active {
+        background: none;
+        color: rgb(0, 7, 7);
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+    /* el foco con tabulador para mayor accesibilidad visual */
+    .nav-toggl:focus:not(:focus-visible){
+        outline: none;
+    }
+    .nav-img {
+        height: 70px;
+        width: 230px;
+    }
+    
 }
