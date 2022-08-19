@@ -1,6 +1,7 @@
 import data from '/src/data/athletes/athletes.js';
 
 console.log(data);
+
 //interaccion con el DOM
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");

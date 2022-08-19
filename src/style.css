@@ -9,10 +9,7 @@ body {
     background-image: url(img/fondoazul.png);
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    
 }
 
 .header {
@@ -70,7 +67,6 @@ body {
     padding: 0 20px;
     line-height: 60px;
     cursor: pointer;
-    
     display: none;
 }
 
@@ -111,6 +107,10 @@ p {
 
 h1 {
     text-transform: uppercase;
+}
+
+main {
+    text-align: justify;
 }
 
 /* arreglo de las tarjetas de los atletas */
