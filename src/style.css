@@ -7,6 +7,8 @@ body {
     font-family: sans-serif;
     padding: 90px 20px 0;
     background-image: url(img/fondoazul.png);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header {
@@ -69,24 +71,116 @@ body {
 }
 
 .nav-img {
+    display: table-cell;
     height: 80px;
     width: 600px;
     position: relative;
-    
+    vertical-align: middle;
 }
 
-.tituloPortada{
-    margin: 10px 0px 10px 500px;
+.tituloPortada {
+    /* margin: 10px 0px 10px 500px; */
+    text-align: center;
 }
 
 .img1 {
     border-radius: 20%;
     height: 500px;
     height: 300px;
-    margin: 10px 10px 10px 500px;
+    /* margin: 10px 10px 10px 600px; */
+    margin: auto;
+    display: block;
 }
 
-/* dseñ de dispositivo movil menos de 768px */
+p {
+    text-align: justify;
+}
+
+.aros {
+    border-radius: 20%;
+    height: 500px;
+    height: 300px;
+    /* margin: 10px 10px 10px 600px; */
+    margin: 10px auto;
+    display: block;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.mascota1 {
+    display: flex;
+    max-width: 32%;
+}
+
+.mascotas2 {
+    display: flex;
+    max-width: 32%;
+}
+
+.mascotasabrazadas {
+    display: flex;
+    max-width: 32%;
+}
+
+/* arreglo de las tarjetas de los atletas */
+
+.container {
+    padding: 15px;
+}
+
+.card {
+    padding: 15px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #80c1f2 0%, #7c9ef2 100%);
+    border-radius: 20%;
+    color: #fff;
+}
+
+.cardBody {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardBody h2,
+.cardBody p {
+    margin: 0;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+    height: 60px;   
+    width: 60px;    
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.atleta {
+    font-size: 20px;
+}
+.cardBodyItem {
+    display: flex;
+}
+
+.cardBody .deporte {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.datos {
+    display: flex;
+    font-size: 12px;
+}
+
+.datos div{
+    margin-right: 10px;
+    text-align: center;
+} 
+
+/* diseño de dispositivo movil menos de 768px */
 @media (max-width: 768px) {
     body {
         padding-top: 70px;
@@ -136,24 +230,38 @@ body {
     .nav-menu_visible {
         left: 0;
     }
+
     /* el foco con tabulador para mayor accesibilidad visual */
-    .nav-toggl:focus:not(:focus-visible){
+    .nav-toggl:focus:not(:focus-visible) {
         outline: none;
     }
+
     .nav-img {
         height: 60px;
         width: 230px;
     }
 
-    .tituloPortada{
+    .tituloPortada {
         margin: 10px 0px 10px 50px;
+        text-align: center;
     }
-    
+
     .img1 {
         border-radius: 20%;
+        display: block;
         height: 500px;
         height: 300px;
-        margin: 10px 10px 10px 50px;
+        margin: auto;
     }
-};
 
+    .aros {
+        border-radius: 20%;
+        display: block;
+        height: 300px;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+}
+
+;
