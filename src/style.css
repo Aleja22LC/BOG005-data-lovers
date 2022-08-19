@@ -20,7 +20,7 @@ body {
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 992px;
     margin: 0 auto;
 }
@@ -75,6 +75,17 @@ body {
     
 }
 
+.tituloPortada{
+    margin: 10px 0px 10px 500px;
+}
+
+.img1 {
+    border-radius: 20%;
+    height: 500px;
+    height: 300px;
+    margin: 10px 10px 10px 500px;
+}
+
 /* dseñ de dispositivo movil menos de 768px */
 @media (max-width: 768px) {
     body {
@@ -83,12 +94,6 @@ body {
 
     .header {
         height: 60px;
-    }
-
-    .logo {
-        font-size: 25px;
-        padding: 0 20px;
-        line-height: 60px;
     }
 
     .nav-menu {
@@ -136,8 +141,19 @@ body {
         outline: none;
     }
     .nav-img {
-        height: 70px;
+        height: 60px;
         width: 230px;
     }
+
+    .tituloPortada{
+        margin: 10px 0px 10px 50px;
+    }
     
-}
+    .img1 {
+        border-radius: 20%;
+        height: 500px;
+        height: 300px;
+        margin: 10px 10px 10px 50px;
+    }
+};
+
