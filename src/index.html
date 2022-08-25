@@ -12,7 +12,7 @@
 
 <body>
 
-  <header class="header">
+  <header class="encabezado">
     <nav class="nav">
       <a href="#" class="logo nav-link">
         <figure><img src="/src/img/barrasuper.png" class="nav-img" alt="logo de la pagina" height="70" width="230">
@@ -33,9 +33,12 @@
     </nav>
   </header>
 
+  <!-- creo seccion de inicio con informacion general de los olimpicos rio 2016 -->
   <main class="portada">
-    <h1 class="tituloPortada">JUEGOS OLIMPICOS RIO 2016</h1>
-    <img src="/src/img/Img1.jpg" alt="imagen-rio2016" class="img1"> <br>
+    <h1 class="tituloPortada">JUEGOS OLIMPICOS RIO 2016</h1><br>
+    <figure>
+      <img src="/src/img/Img1.jpg" alt="imagen-rio2016" class="img1"> <br>
+    </figure>
     <p>Los Juegos Olímpicos de Río de Janeiro 2016, oficialmente conocidos como los Juegos de la XXXI Olimpiada, o más
       comúnmente como Río 2016, fue un evento multideportivo internacional, celebrado en la ciudad de Río de Janeiro,
       Brasil, entre el 5 y el 21 de agosto de 2016, aunque la fase de grupos del torneo de fútbol comenzó el 3 de agosto
@@ -62,7 +65,9 @@
       escándalo de dopaje impidió la participación de 118 atletas rusos en los Juegos.</p> <br>
 
     <h1>ANTECEDENTES</h1>
-    <img src="/src/img/arosolimpicos.png" alt="aros olimpicos" class="aros">
+    <figure>
+      <img src="/src/img/arosolimpicos.png" alt="aros olimpicos" class="aros">
+    </figure>
     <P>Durante los años 1930, nació y creció la idea de que América del Sur fuera sede de unos Juegos Olímpicos ante el
       evidente crecimiento del deporte latinoamericano que se daban desde la década de 1920 con destacadas
       participaciones de atletas hispanos en diversas competencias mundiales así como justas olímpicas que se
@@ -79,13 +84,16 @@
       Río de Janeiro se postuló a ser sede de los Juegos Olímpicos de 1936, 1940, 1956, 1960, 2004 y 2012, todas con
       resultados desfavorables sin clasificarse siquiera a la ronda final de votación. En el último proceso en el que
       presentó candidatura, finalmente ganado por Londres, Río de Janeiro no pasó la etapa de evaluación, obteniendo una
-      calificación de 6.0 de un máximo de 10.</P> <br><br>
+      calificación de 6.0 de un máximo de 10.</P> <br>
 
-    <h1>Mascotas de las Olimpiadas Rio 2016</h1><br>
-    <img src="/src/img/mascotasAbrazadas.png" alt="Mascotas Rio 2016" class="mascotasabrazadas" height="300px"
-      width="300px">
-    <figcaption>Mascotas Embajadoras de Olimpiadas Rio 2016. <br> Creador por: <strong><I>Birdo Produções</I></strong>
-    </figcaption><br>
+    <h2>Mascotas de las Olimpiadas Rio 2016</h2><br>
+
+    <figure>
+      <img src="/src/img/mascotasAbrazadas.png" alt="Mascotas Rio 2016" class="mascotasAbrazadas" height="300px"
+        width="300px">
+      <figcaption>Mascotas Embajadoras de Olimpiadas Rio 2016.<br> Creador por: <strong><I>Birdo Produções</I></strong>
+      </figcaption><br>
+    </figure>
     <p>Las mascotas oficiales de las Olimpiadas de Río 2016 son Vinicius y Tom, en homenaje a los ídolos de la música
       brasileña Vinicius de Moraes y Tom Jobim.
       Vinicius es un gato amarillo de brazos azules y el logo de las Olimpiadas en el pecho. Mientras que Tom es un
@@ -103,35 +111,77 @@
         constantemente, creciendo y superando obstáculos. Puede sacar cualquier cosa de su gran cabeza, formada por
         hojas, para resolver problemas.</i>
     </p>
-    <img src="/src/img/mascota1.png" alt="Vinicius Mascota Olimpicos Rio 2016" class="mascota1" height="300px"
-      width="300px">
-    <figcaption>Vinicius Mascota Olimpicos Rio 2016. <br> Creador por: <strong><I>Birdo Produções</I></strong>
-    </figcaption>
-    <img src="/src/img/mascota2.png" alt="Tom Mascota Paralimpicos Rio 2016" class="mascota2" height="300px"
-      width="300px">
-    <figcaption>Tom Mascota Paralimpicos Rio 2016. <br> Creador por: <strong><I>Birdo Produções</I></strong>
-    </figcaption>
+    <figure>
+      <img src="/src/img/mascota1.png" alt="Vinicius Mascota Olimpicos Rio 2016" class="mascota1" height="300px"
+        width="300px">
+      <figcaption>Vinicius Mascota Olimpicos Rio 2016. <br> Creador por: <strong><I>Birdo Produções</I></strong>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="/src/img/mascota2.png" alt="Tom Mascota Paralimpicos Rio 2016" class="mascota2" height="300px"
+        width="300px">
+      <figcaption>Tom Mascota Paralimpicos Rio 2016. <br> Creador por: <strong><I>Birdo Produções</I></strong>
+      </figcaption>
+    </figure>
   </main>
 
   <!-- creo lista o tabla de paises participantes en las olimpiadas rio2016 -->
   <section id="listaPaises" class="listaPaises ">
-    <h1>Buscar Pais Participante</h1><br>
-    <input type="text" name="Buscar Pais" id="buscador" class="buscador "> 
-    <button class="btnLupa " id="btnLupa"><img src="/src/img/lupa.png" alt="buscador" height="20px" width="20px"></button>
-    <ul id="resultado">
-      
-    </ul>
+    <h1>Buscar: Pais Participante en las Olimpiadas Rio 2016</h1><br>
+    <input type="text" name="buscarPais" id="buscador" class="buscador ">
+    <button class="btnLupa" id="btnLupa"><img src="/src/img/lupa.png" alt="buscador" height="20px"
+        width="20px"></button>
+    <select name="lista" id="lista">
+
+    </select>
+    <ol id="resultado" class="lista">
+
+    </ol>
+  </section>
+
+  <!-- medallero -->
+  <section class="medallero" id="medallero">
+    <p>
+      <select name="tipoMedallas" id="medallas" class="medallas">
+        <option value="SelectMedal">Seleccionar Medalla</option>
+        <option value="Gold">Oro</option>
+        <option value="Silver">Plata</option>
+        <option value="Bronze">Bronce</option>
+      </select>
+    </p>
+
+    <table class="tabla" id="tablaMedallas">
+      <thead>
+        <tr>
+          <th>PAIS</th>
+          <th>TEAM</th>
+          <th>DEPORTE</th>
+          <th>EVENTO</th>
+          <th>MEDALLA</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo">
+        <tr>
+          <th>team</th>
+          <th>noc</th>
+          <th>sport</th>
+          <th>event</th>
+          <th>medal</th>
+        </tr>
+      </tbody>
+    </table>
 
   </section>
+
 
   <!-- creo seccion para las tarjetas de los atletas y su respectiva informacion -->
   <section class="container">
 
-    <article class="card">
-      <div class="cardImg">
+    <article class="tarjeta">
+      <div class="tarjetaImg">
         <img src="/src/img/iconohombre.png" alt="icono hombre">
       </div>
-      <div class="cardContenido">
+      <div class="tarjetaContenido">
         <h2 class="info-personal desplazar Nombre">Nombre Atleta</h2>
         <h3 class="info-personal desplazar deporte">Especialidad Deportiva:<br></h3>
         <div>
@@ -146,11 +196,11 @@
       </div>
     </article>
 
-    <article class="card">
-      <div class="cardImg">
+    <article class="tarjeta">
+      <div class="tarjetaImg">
         <img src="/src/img/iconohombre.png" alt="icono hombre">
       </div>
-      <div class="cardContenido">
+      <div class="tarjetaContenido">
         <h2 class="info-personal desplazar Nombre">Nombre Atleta</h2>
         <h3 class="info-personal desplazar deporte">Especialidad Deportiva:<br></h3>
         <div>
@@ -165,11 +215,11 @@
       </div>
     </article>
 
-    <article class="card">
-      <div class="cardImg">
+    <article class="tarjeta">
+      <div class="tarjetaImg">
         <img src="/src/img/iconohombre.png" alt="icono hombre">
       </div>
-      <div class="cardContenido">
+      <div class="tarjetaContenido">
         <h2 class="info-personal desplazar Nombre">Nombre Atleta</h2>
         <h3 class="info-personal desplazar deporte">Especialidad Deportiva:<br></h3>
         <div>
@@ -186,8 +236,8 @@
 
   </section>
 
-
-
+  <!-- creo pie de pagina -->
+  <footer>Derechos Reservados &copy; 2022</footer>
   <script defer src="main.js" type="module"></script>
 </body>
 
