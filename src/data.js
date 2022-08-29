@@ -11,16 +11,6 @@ export function filtrarMedallas(tipoMedalla, data) {
   return medallas;
 }
 
-//filtrar los paises para encontar el que el usuario desea
-// export function filtrarPaises(nombrePais, data) {
-//   const filtrarData = data.filter(function (datoAFiltrar) {
-//     return datoAFiltrar.team === nombrePais;
-//   })
-//   return filtrarData;
-// }
-// console.log('filtrar paises', filtrarPaises);
-// console.log('filtrar data', filtrarData);
-
 //ordenar los paises participantes de la A-Z y de la Z-A
 export function ordenarPaises(opcion, data) {
   const copiaData=[...data]
@@ -40,4 +30,12 @@ export function ordenarPaises(opcion, data) {
   }
   
 }
+
+//funcion calcular
+export function calcularXMedallas (data,medal) {
+  const porcentajeMedallas = filtrarMedallas(tipoMedalla, data)
+  const porcentaje = Math.round((porcentajeMedallas.length/data.length)*100)
+  return porcentaje
+}
+
 

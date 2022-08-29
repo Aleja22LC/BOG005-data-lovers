@@ -24,6 +24,13 @@ Usuarios:
 Para dar inicio al desarrollo del proyecto importe la data e identifique la informacion que contenia para luego decidir que informacion podria usar para resolver los requerimientos o necesidades que tienen los usuarios potenciales.
 
 Con respecto a las necesidades del usario se tom encuenta la Investigacion con las personas interesadas en los juegos olimpicos de Rios de Janeiro 2016, para hacer el desarrollo de las historias de usuario. Tras lo cual inicie con el desarrollo del prototipo de baja fidelidad hecho a mano en papel y lapiz:
+![primerP](src/img/primerprototipo.jpeg)
+![segundaP](src/img/segundoprototipo.jpeg)
+
+Al tener el prototipo de baja fidelidad terminado y recibir los feedback de compañeros y coach, procedi a elaborar el prototipo de alta fidelidad, en primer lugar para celulares:
+
+![prototipoCel](src/img/PrototipoCel.PNG)
+
 
 
 
