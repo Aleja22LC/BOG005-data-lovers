@@ -128,7 +128,7 @@
   <!-- creo lista o tabla de paises participantes en las olimpiadas rio2016 -->
   <section id="listaPaises" class="listaPaises ">
     <h1>Buscar: Pais Participante en las Olimpiadas Rio 2016</h1><br>
-    <input type="text" name="buscarPais" id="buscador" class="buscador ">
+    <input type="text" name="buscarPais" id="buscador" class="buscador" placeholder="Buscar Pais" >
     <button class="btnLupa" id="btnLupa"><img src="/src/img/lupa.png" alt="buscador" height="20px"
         width="20px"></button>
     <select name="lista" id="lista">
@@ -141,14 +141,19 @@
 
   <!-- medallero -->
   <section class="medallero" id="medallero">
-    <p>
+    
       <select name="tipoMedallas" id="medallas" class="medallas">
         <option value="SelectMedal">Seleccionar Medalla</option>
         <option value="Gold">Oro</option>
         <option value="Silver">Plata</option>
         <option value="Bronze">Bronce</option>
       </select>
-    </p>
+    
+      <select name="ordenAz" id="ordenAz" class="ordenAz">
+        <option value="AZ">"A-Z"</option>
+        <option value="ZA">"Z-A"</option>
+      </select>
+    
 
     <table class="tabla" id="tablaMedallas">
       <thead>
@@ -172,7 +177,6 @@
     </table>
 
   </section>
-
 
   <!-- creo seccion para las tarjetas de los atletas y su respectiva informacion -->
   <section class="container">

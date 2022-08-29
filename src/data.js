@@ -22,7 +22,22 @@ export function filtrarMedallas(tipoMedalla, data) {
 // console.log('filtrar data', filtrarData);
 
 //ordenar los paises participantes de la A-Z y de la Z-A
-function ordenarPaises() {
-
+export function ordenarPaises(opcion, data) {
+  const copiaData=[...data]
+  const ordenData= copiaData.sort (function (a,b){
+    if (a.team > b.team) {
+      return 1;
+    }
+    if (a.team < b.team) {
+      return -1;
+    }    
+    return 0;
+  })
+  if (opcion == 'AZ'){
+    return ordenData;
+  }else {
+    return ordenData.reverse()
+  }
+  
 }
 

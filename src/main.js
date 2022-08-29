@@ -1,6 +1,6 @@
 import data from './data/athletes/athletes.js';
 //import {filtrarPaises} from './data';
-import { filtrarMedallas } from './data.js';
+import { filtrarMedallas, ordenarPaises } from './data.js';
 
 const dataAtletas = data.athletes
 const dataPaises = dataAtletas.map(elem => elem.team)
@@ -14,44 +14,9 @@ console.log('equipos', dataEquipos);
 const portada = document.querySelector('.portada')
 const container = document.querySelector('.container')
 const listaPaises = document.querySelector('.listaPaises')
+const medalleria = document.querySelector ('.medallero')
 
-//pintar data
-//interaccion con el dom funcion filtrar medallas 
-const pintarData = (data) => {
-     let plantilla = ""
-     data.forEach((element) => {
-          console.log(element)
-          plantilla += `
-                    <tr>
-                    <th>${element.team}</th>
-                    <td>${element.noc}</td>
-                    <td>${element.sport}</td>
-                    <td>${element.event}</td>
-                    <td>${element.medal}</td>
-                    </tr>                   
-                     `
-     })
-     document.getElementById("cuerpo").innerHTML=plantilla;
-}
-pintarData(dataAtletas)
 
-const selecMedalla = document.getElementById('medallas')
-selecMedalla.addEventListener("change", (e) => {
-     let evento = e.target.value;
-     let arrayMedalla = filtrarMedallas(evento, dataAtletas);
-
-pintarData(arrayMedalla)
-
-});
-
-//interaccion con el dom funcion filtrar paises 
-const equipo = document.getElementById('listaPaises')
-equipo.addEventListener("change", (e) => {
-     let select1 = e.target.value;
-     let arrPais = filtrarPaises(select1, dataAtletas)
-     console.log(arrPais)
-     //llama  crearTarjetas (arrPais)
-})
 
 //const de las li de nav
 const inicio = document.querySelector('#inicio')
@@ -65,6 +30,7 @@ function mostrarPortada() {
      portada.style.display = "block"
      container.style.display = "none"
      listaPaises.style.display = "none"
+     medalleria.style.display = "none"
 }
 mostrarPortada()
 
@@ -73,6 +39,7 @@ function mostrarContainer() {
      container.style.display = "block"
      portada.style.display = "none"
      listaPaises.style.display = "none"
+     medalleria.style.display = "none"
 }
 mostrarContainer()
 
@@ -81,8 +48,41 @@ function mostrarlistaPaises() {
      listaPaises.style.display = "block"
      portada.style.display = "none"
      container.style.display = "none"
+     medalleria.style.display = "none"
 }
 mostrarlistaPaises()
+
+//mostrar tabla de medallero
+function mostrarMedallero (){
+     medalleria.style.display = "block"
+     listaPaises.style.display = "none"
+     portada.style.display = "none"
+     container.style.display = "none"
+}
+mostrarMedallero ()
+
+//crear eventos para los li del nav-menu
+inicio.addEventListener("click", () => {
+     mostrarPortada()
+})
+
+paisesPar.addEventListener("click", () => {
+     mostrarlistaPaises()
+     pintarPaises(dataPaises)
+})
+
+medallero.addEventListener("click", () => {
+     mostrarMedallero()
+     pintarData(dataAtletas)
+})
+
+deportes.addEventListener("click", () => {
+     alert('hola')
+})
+
+atletas.addEventListener("click", () => {
+     mostrarContainer()
+})
 
 //Nav - boton hamburguesa
 const navToggle = document.querySelector(".nav-toggle");
@@ -97,12 +97,6 @@ navToggle.addEventListener("click", () => {
           navToggle.setAttribute("aria-label", "Abrir Menú")
      }
 });
-
-//llamar los paises participantes
-// const nombresPaises =[
-//      {dataAtletas}
-// ]
-// console.log(nombresPaises)
 
 // //funcionalida buscar paises
 // const buscador= document.querySelector('#buscador');
@@ -131,6 +125,15 @@ navToggle.addEventListener("click", () => {
 // btnLupa.addEventListener ('click', encontrar)
 // buscador.addEventListener ('keyup', encontrar)
 
+//interaccion con el dom funcion filtrar paises 
+// const equipo = document.getElementById('listaPaises')
+// equipo.addEventListener("change", (e) => {
+//      let select1 = e.target.value;
+//      let arrPais = filtrarPaises(select1, dataAtletas)
+//      console.log(arrPais)
+//      //llama  crearTarjetas (arrPais)
+// })
+
 //Función sin retorno que pintará un template de lista países
 
 function pintarPaises(data) {
@@ -141,27 +144,47 @@ function pintarPaises(data) {
      document.querySelector('#resultado').innerHTML = lista;
 }
 
-//crear eventos para los li del nav-menu
-inicio.addEventListener("click", () => {
-     mostrarPortada()
-})
+//pintar data
+//interaccion con el dom funcion filtrar medallas 
+const pintarData = (data) => {
+     let plantilla = ""
+     data.forEach((element) => {
+          //console.log(element)
+          plantilla += `
+                    <tr>
+                    <th>${element.team}</th>
+                    <td>${element.noc}</td>
+                    <td>${element.sport}</td>
+                    <td>${element.event}</td>
+                    <td>${element.medal}</td>
+                    </tr>                   
+                     `
+     })
+     document.getElementById("cuerpo").innerHTML=plantilla;
+}
+pintarData(dataAtletas)
 
-paisesPar.addEventListener("click", () => {
-     mostrarlistaPaises()
-     pintarPaises(dataPaises)
-})
+const selecMedalla = document.getElementById('medallas')
+selecMedalla.addEventListener("change", (e) => {
+     let evento = e.target.value;
+     let arrayMedalla = filtrarMedallas(evento, dataAtletas);
 
-medallero.addEventListener("click", () => {
-     alert('hola')
-})
+pintarData(arrayMedalla)
 
-deportes.addEventListener("click", () => {
-     alert('hola')
-})
+});
 
-atletas.addEventListener("click", () => {
-     mostrarContainer()
-})
+const selectAz = document.getElementById ('ordenAz')
+selectAz.addEventListener("change",(e) => {
+     let eventoAz = e.target.value;
+     let arrayOrden = ordenarPaises(eventoAz,dataAtletas)
+
+pintarData(arrayOrden)
+
+}); 
+
+
+
+
 
 
 
