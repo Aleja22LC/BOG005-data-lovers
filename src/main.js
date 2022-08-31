@@ -4,24 +4,23 @@ import { filtrarMedallas, ordenarPaises } from './data.js';
 
 const dataAtletas = data.athletes
 const dataPaises = dataAtletas.map(elem => elem.team)
-const dataEquipos = dataAtletas.map(elem => elem.noc)
+//const dataEquipos = dataAtletas.map(elem => elem.noc)
 
-console.log('data global: ', dataAtletas);
-console.log('aqui team', dataPaises);
-console.log('equipos', dataEquipos);
+//console.log('data global: ', dataAtletas);
+//console.log('aqui team', dataPaises);
+//console.log('equipos', dataEquipos);
 
 //interaccion con el DOM
 const portada = document.querySelector('.portada')
 const container = document.querySelector('.container')
 const listaPaises = document.querySelector('.listaPaises')
-const medalleria = document.querySelector ('.medallero')
-
+const medalleria = document.querySelector('.medallero')
 
 
 //const de las li de nav
 const inicio = document.querySelector('#inicio')
 const paisesPar = document.querySelector('#paisesPar')
-const medallero = document.querySelector('#medallero')
+const medallero = document.querySelector('#medalleroNav')
 const deportes = document.querySelector('#deportes')
 const atletas = document.querySelector('#atletas')
 
@@ -53,13 +52,13 @@ function mostrarlistaPaises() {
 mostrarlistaPaises()
 
 //mostrar tabla de medallero
-function mostrarMedallero (){
+function mostrarMedallero() {
      medalleria.style.display = "block"
      listaPaises.style.display = "none"
      portada.style.display = "none"
      container.style.display = "none"
 }
-mostrarMedallero ()
+mostrarMedallero()
 
 //crear eventos para los li del nav-menu
 inicio.addEventListener("click", () => {
@@ -68,7 +67,7 @@ inicio.addEventListener("click", () => {
 
 paisesPar.addEventListener("click", () => {
      mostrarlistaPaises()
-     pintarPaises(dataPaises)
+     pintarPaises(dataAtletas)
 })
 
 medallero.addEventListener("click", () => {
@@ -101,18 +100,18 @@ navToggle.addEventListener("click", () => {
 // //funcionalida buscar paises
 // const buscador= document.querySelector('#buscador');
 // const btnLupa= document.querySelector('#btnLupa');
-// const resultado= document.querySelector ('#resultado');
+// let resultado= document.querySelector ('#resultado');
 
 // const encontrar = () => {
 //      //console.log(buscador.value);
-//      resultado.innerHTML = '';
+//      document.resultado.innerHTML = '';
 //      //guardar el texto que escribe el usuario
 //      const texto = buscador.value.toLowerCase();
-//      for (let equipo of nombresPaises){
+//      for (let equipo of dataAtletas){
 //           let nombre = equipo.team.toLowerCase();
 //           if (nombre.indexOf(texto) !== -1){
 //                resultado.innerHTML += `
-//                <li>${dataPaises}</li>
+//                <li>${dataAtletas}</li>
 //                `
 //           }
 //      }
@@ -125,24 +124,26 @@ navToggle.addEventListener("click", () => {
 // btnLupa.addEventListener ('click', encontrar)
 // buscador.addEventListener ('keyup', encontrar)
 
-//interaccion con el dom funcion filtrar paises 
-// const equipo = document.getElementById('listaPaises')
-// equipo.addEventListener("change", (e) => {
-//      let select1 = e.target.value;
-//      let arrPais = filtrarPaises(select1, dataAtletas)
-//      console.log(arrPais)
-//      //llama  crearTarjetas (arrPais)
-// })
-
 //Función sin retorno que pintará un template de lista países
-
-function pintarPaises(data) {
-     let lista = ""
-     for (const elem of data) {
-          lista += `<li>${elem}</li> `
-     }
-     document.querySelector('#resultado').innerHTML = lista;
+const pintarPaises = (data) => {
+     let plantilla0 = ""
+     data.forEach((element) => {
+          //console.log(element)
+          plantilla0 += `
+                    <tr>
+                    <th>${element.noc}</th>
+                    <th>${element.team}</th>
+                    </tr>
+                    
+                     `
+     })
+     document.getElementById("cuerpo0").innerHTML = plantilla0;
 }
+pintarPaises(dataAtletas)
+//convertir string en array
+
+//eliminar paises duplicados
+
 
 //pintar data
 //interaccion con el dom funcion filtrar medallas 
@@ -152,7 +153,7 @@ const pintarData = (data) => {
           //console.log(element)
           plantilla += `
                     <tr>
-                    <th>${element.team}</th>
+                    <td>${element.team}</td>
                     <td>${element.noc}</td>
                     <td>${element.sport}</td>
                     <td>${element.event}</td>
@@ -160,7 +161,7 @@ const pintarData = (data) => {
                     </tr>                   
                      `
      })
-     document.getElementById("cuerpo").innerHTML=plantilla;
+     document.getElementById("cuerpo").innerHTML = plantilla;
 }
 pintarData(dataAtletas)
 
@@ -169,18 +170,18 @@ selecMedalla.addEventListener("change", (e) => {
      let evento = e.target.value;
      let arrayMedalla = filtrarMedallas(evento, dataAtletas);
 
-pintarData(arrayMedalla)
+     pintarData(arrayMedalla)
 
 });
 
-const selectAz = document.getElementById ('ordenAz')
-selectAz.addEventListener("change",(e) => {
+const selectAz = document.getElementById('ordenAz')
+selectAz.addEventListener("change", (e) => {
      let eventoAz = e.target.value;
-     let arrayOrden = ordenarPaises(eventoAz,dataAtletas)
+     let arrayOrden = ordenarPaises(eventoAz, dataAtletas)
 
-pintarData(arrayOrden)
+     pintarData(arrayOrden)
 
-}); 
+});
 
 
 

@@ -26,7 +26,7 @@
         <li id="inicio" class="item"><a href="#" class="item-link nav-link item-link-active">Inicio</a></li>
         <li id="paisesPar" class="item"><a href="#" class="item-link nav-link item-link-active">Paises Participantes</a>
         </li>
-        <li id="medallero" class="item"><a href="#" class="item-link nav-link item-link-active">Medallero</a></li>
+        <li id="medalleroNav" class="item"><a href="#" class="item-link nav-link item-link-active">Medallero</a></li>
         <li id="deportes" class="item"><a href="#" class="item-link nav-link item-link-active">Deportes</a></li>
         <li id="atletas" class="item"><a href="#" class="item-link nav-link item-link-active">Atletas</a></li>
       </ul>
@@ -68,7 +68,7 @@
     <figure>
       <img src="/src/img/arosolimpicos.png" alt="aros olimpicos" class="aros">
     </figure>
-    <P>Durante los años 1930, nació y creció la idea de que América del Sur fuera sede de unos Juegos Olímpicos ante el
+    <p>Durante los años 1930, nació y creció la idea de que América del Sur fuera sede de unos Juegos Olímpicos ante el
       evidente crecimiento del deporte latinoamericano que se daban desde la década de 1920 con destacadas
       participaciones de atletas hispanos en diversas competencias mundiales así como justas olímpicas que se
       desarrollaban desde estos tiempos. Río de Janeiro y la capital de Argentina, Buenos Aires fueron las primeras
@@ -84,14 +84,14 @@
       Río de Janeiro se postuló a ser sede de los Juegos Olímpicos de 1936, 1940, 1956, 1960, 2004 y 2012, todas con
       resultados desfavorables sin clasificarse siquiera a la ronda final de votación. En el último proceso en el que
       presentó candidatura, finalmente ganado por Londres, Río de Janeiro no pasó la etapa de evaluación, obteniendo una
-      calificación de 6.0 de un máximo de 10.</P> <br>
+      calificación de 6.0 de un máximo de 10.</p> <br>
 
     <h2>Mascotas de las Olimpiadas Rio 2016</h2><br>
 
     <figure>
       <img src="/src/img/mascotasAbrazadas.png" alt="Mascotas Rio 2016" class="mascotasAbrazadas" height="300px"
         width="300px">
-      <figcaption>Mascotas Embajadoras de Olimpiadas Rio 2016.<br> Creador por: <strong><I>Birdo Produções</I></strong>
+      <figcaption>Mascotas Embajadoras de Olimpiadas Rio 2016.<br> Creador por: <strong><i>Birdo Produções</i></strong>
       </figcaption><br>
     </figure>
     <p>Las mascotas oficiales de las Olimpiadas de Río 2016 son Vinicius y Tom, en homenaje a los ídolos de la música
@@ -114,13 +114,13 @@
     <figure>
       <img src="/src/img/mascota1.png" alt="Vinicius Mascota Olimpicos Rio 2016" class="mascota1" height="300px"
         width="300px">
-      <figcaption>Vinicius Mascota Olimpicos Rio 2016. <br> Creador por: <strong><I>Birdo Produções</I></strong>
+      <figcaption>Vinicius Mascota Olimpicos Rio 2016. <br> Creador por: <strong><i>Birdo Produções</i></strong>
       </figcaption>
     </figure>
     <figure>
       <img src="/src/img/mascota2.png" alt="Tom Mascota Paralimpicos Rio 2016" class="mascota2" height="300px"
         width="300px">
-      <figcaption>Tom Mascota Paralimpicos Rio 2016. <br> Creador por: <strong><I>Birdo Produções</I></strong>
+      <figcaption>Tom Mascota Paralimpicos Rio 2016. <br> Creador por: <strong><i>Birdo Produções</i></strong>
       </figcaption>
     </figure>
   </main>
@@ -128,34 +128,49 @@
   <!-- creo lista o tabla de paises participantes en las olimpiadas rio2016 -->
   <section id="listaPaises" class="listaPaises ">
     <h1>Paises Participantes en las Olimpiadas Rio 2016</h1><br>
-    <input type="text" name="buscarPais" id="buscador" class="buscador" placeholder="Buscar Pais" >
+    <input type="text" name="buscarPais" id="buscador" class="buscador" placeholder="Buscar Pais">
     <button class="btnLupa" id="btnLupa"><img src="/src/img/lupa.png" alt="buscador" height="20px"
         width="20px"></button>
-    <select name="lista" id="lista">
 
-    </select>
-    <ol id="resultado" class="lista">
-
+    <!-- <ol id="resultado" class="lista"></ol> -->
+    <ol>
+      <table class="tablaPais" id="tablaPais">
+        <thead>
+          <tr>
+            <th>TEAM</th>
+            <th>PAIS</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo0">
+          <tr>
+            <th>noc</th>
+            <th>team</th>
+          </tr>
+        </tbody>
+      </table>
     </ol>
+
   </section>
 
   <!-- medallero -->
   <section class="medallero" id="medallero">
-    
-      <select name="tipoMedallas" id="medallas" class="medallas">
-        <option value="SelectMedal">Seleccionar Medalla</option>
-        <option value="Gold">Oro</option>
-        <option value="Silver">Plata</option>
-        <option value="Bronze">Bronce</option>
-      </select>
-    
-      <select name="ordenAz" id="ordenAz" class="ordenAz">
-        <option value="AZ">"A-Z"</option>
-        <option value="ZA">"Z-A"</option>
-      </select>
-    
+    <figure><img src="/src/img/medallas.png" alt="MedallasOlimpicas" class="medallas"></figure>
 
-    <table class="tabla" id="tablaMedallas">
+    <select name="tipoMedallas" id="medallas" class="medallas">
+      <option value="SelectMedal">Seleccionar Medalla</option>
+      <option value="Gold">Oro</option>
+      <option value="Silver">Plata</option>
+      <option value="Bronze">Bronce</option>
+    </select>
+
+    <select name="ordenAz" id="ordenAz" class="ordenAz">
+      <option value="AZ">Ordenar de la "A - Z"</option>
+      <option value="ZA">Ordenar de la "Z - A"</option>
+    </select>
+
+
+
+    <table class="tablaMedallas" id="tablaMedallas">
       <thead>
         <tr>
           <th>PAIS</th>

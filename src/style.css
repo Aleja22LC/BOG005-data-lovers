@@ -19,7 +19,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    text-shadow: rgb(0,0,150) 1px 1px 5px;
+    text-shadow: rgb(0, 0, 150) 1px 1px 5px;
 }
 
 .nav {
@@ -112,7 +112,7 @@ h1 {
 }
 
 h2 {
-    text-align:left;
+    text-align: left;
 }
 
 main {
@@ -120,13 +120,90 @@ main {
 }
 
 /* arreglo posiciones de imagenes del inicio */
-.mascotasAbrazadas {
+/* .mascotasAbrazadas {
     display: flex;
+}*/
+/* .mascota1 {
+    float: left;
+    width: 100px;
+  height: 100px;
+  margin: 3px;
+  padding: 3px;
+  border: black 2px solid;
 }
 
-.mascota1,
-.mascota2 {
-    display: flex;
+.mascota2{
+    float: right;
+} */
+  
+ 
+figure {
+    text-align: center;
+}
+
+/* diseño tablas */
+.tablaPais {
+    width: auto;
+    border: 1px solid #000;
+    border-spacing: 0;
+    padding: 0.3em;
+    border-collapse: separate;
+}
+
+.tablaMedallas {
+    width: 100%;
+    border: 1px solid #000;
+    border-spacing: 0;
+    padding: 0.3em;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(162, 230, 242);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(121, 198, 252);
+}
+
+th {
+    background-color: white;
+}
+
+th,
+td {
+    width: auto;
+    text-align: center;
+    border: 1px solid #000;
+    border-spacing: 0;     
+}
+
+/* diseño del select */
+select{
+    max-width: 300px;
+	position: relative;
+
+    display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: rgb(13, 1, 1);
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;    
+}
+
+select:hover{
+    background: #2fc3f0;
 }
 
 /* pie de pagina */
@@ -136,11 +213,13 @@ footer {
     padding: 20px;
     border-top: 2px solid #9999;
 }
+
 /* pestaña de paises participantes */
 .buscador {
     margin: 2px;
 }
-.btnLupa{
+
+.btnLupa {
     margin-bottom: 2px;
 }
 

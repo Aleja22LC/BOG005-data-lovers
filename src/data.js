@@ -32,10 +32,10 @@ export function ordenarPaises(opcion, data) {
 }
 
 //funcion calcular
-export function calcularXMedallas (data,medal) {
-  const porcentajeMedallas = filtrarMedallas(tipoMedalla, data)
-  const porcentaje = Math.round((porcentajeMedallas.length/data.length)*100)
-  return porcentaje
-}
+// export function calcularXMedallas (medal,data) {
+//   const porcentajeMedallas = filtrarMedallas(tipoMedalla, data)
+//   const porcentaje = Math.round((porcentajeMedallas.length/data.length)*100)
+//   return porcentaje
+// }
 
 
