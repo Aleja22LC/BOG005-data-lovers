@@ -7,7 +7,7 @@ const dataPaises = dataAtletas.map(elem => elem.team)
 //const dataEquipos = dataAtletas.map(elem => elem.noc)
 
 //console.log('data global: ', dataAtletas);
-//console.log('aqui team', dataPaises);
+console.log('aqui team', dataPaises);
 //console.log('equipos', dataEquipos);
 
 //interaccion con el DOM
@@ -125,9 +125,9 @@ navToggle.addEventListener("click", () => {
 // buscador.addEventListener ('keyup', encontrar)
 
 //Función sin retorno que pintará un template de lista países
-const pintarPaises = (data) => {
+const pintarPaises = (dataAtletas) => {
      let plantilla0 = ""
-     data.forEach((element) => {
+     dataAtletas.forEach((element) => {
           //console.log(element)
           plantilla0 += `
                     <tr>
@@ -165,6 +165,7 @@ const pintarData = (data) => {
 }
 pintarData(dataAtletas)
 
+//funcion filtrar
 const selecMedalla = document.getElementById('medallas')
 selecMedalla.addEventListener("change", (e) => {
      let evento = e.target.value;
