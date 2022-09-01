@@ -144,15 +144,15 @@ describe(filtrarMedallas, () => {
   it('Deberia mostrar las medallas por tipo plata', () => {
     const dataPlata = [
       {
-        "name": "Denis Mikhaylovich Ablyazin",
+        "name": "Luc Abalo",
         "gender": "M",
-        "height": "161",
-        "weight": "62",
-        "sport": "Gymnastics",
-        "team": "Russia",
-        "noc": "RUS",
-        "age": 24,
-        "event": "Gymnastics Men's Horse Vault",
+        "height": "182",
+        "weight": "86",
+        "sport": "Handball",
+        "team": "France",
+        "noc": "FRA",
+        "age": 31,
+        "event": "Handball Men's Handball",
         "medal": "Silver"
       },
       {
@@ -168,17 +168,18 @@ describe(filtrarMedallas, () => {
         "medal": "Silver"
       },
       {
-        "name": "Luc Abalo",
+        "name": "Denis Mikhaylovich Ablyazin",
         "gender": "M",
-        "height": "182",
-        "weight": "86",
-        "sport": "Handball",
-        "team": "France",
-        "noc": "FRA",
-        "age": 31,
-        "event": "Handball Men's Handball",
+        "height": "161",
+        "weight": "62",
+        "sport": "Gymnastics",
+        "team": "Russia",
+        "noc": "RUS",
+        "age": 24,
+        "event": "Gymnastics Men's Horse Vault",
         "medal": "Silver"
       },
+      
 
     ]
     expect(filtrarMedallas("Silver", muestraData)).toEqual(dataPlata);

@@ -1,7 +1,7 @@
 // estas funciones son de ejemplo
-export const example = () => {
-  return 'example';
-};
+// export const example = () => {
+//   return 'example';
+// };
 //funciones (filter-sort-compute)
 //filtrar por tipo de medalla
 export function filtrarMedallas(tipoMedalla, data) {

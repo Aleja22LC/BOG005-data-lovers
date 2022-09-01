@@ -3,11 +3,10 @@ import data from './data/athletes/athletes.js';
 import { filtrarMedallas, ordenarPaises } from './data.js';
 
 const dataAtletas = data.athletes
-const dataPaises = dataAtletas.map(elem => elem.team)
-//const dataEquipos = dataAtletas.map(elem => elem.noc)
+//const dataPaises = dataAtletas.map(elem => elem.team))
 
 //console.log('data global: ', dataAtletas);
-console.log('aqui team', dataPaises);
+//console.log('aqui team', dataPaises);
 //console.log('equipos', dataEquipos);
 
 //interaccion con el DOM
