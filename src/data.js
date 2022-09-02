@@ -1,8 +1,4 @@
-// estas funciones son de ejemplo
-// export const example = () => {
-//   return 'example';
-// };
-//funciones (filter-sort-compute)
+//...funciones (filter-sort-compute)...
 //filtrar por tipo de medalla
 export function filtrarMedallas(tipoMedalla, data) {
   const medallas = data.filter(function (datoMedalla) {
@@ -23,12 +19,13 @@ export function ordenarPaises(opcion, data) {
     }    
     return 0;
   })
+  //console.log('ver: ',ordenData)
+
   if (opcion == 'AZ'){
     return ordenData;
   }else {
     return ordenData.reverse()
-  }
-  
+  }  
 }
 
 //funcion calcular

@@ -1,5 +1,6 @@
-import { filtrarMedallas } from '../src/data.js';
+import { filtrarMedallas, ordenarPaises } from '../src/data.js';
 
+//muestra de la data original para funcion filter
 const muestraData = [
   {
     "name": "Giovanni Abagnale",
@@ -121,7 +122,59 @@ const muestraData = [
     "event": "Taekwondo Men's Featherweight",
     "medal": "Gold"
   },]
+//muestra para funcion ordenar
+const muestraDesordenada = [
+    {
+      "name": "Matthew \"Matt\" Abood",
+      "gender": "M",
+      "height": "197",
+      "weight": "92",
+      "sport": "Swimming",
+      "team": "Australia",
+      "noc": "AUS",
+      "age": 30,
+      "event": "Swimming Men's 4 x 100 metres Freestyle Relay",
+      "medal": "Bronze"
+    },   
+    {
+      "name": "Ahmad Abughaush",
+      "gender": "M",
+      "height": "178",
+      "weight": "68",
+      "sport": "Taekwondo",
+      "team": "Jordan",
+      "noc": "JOR",
+      "age": 20,
+      "event": "Taekwondo Men's Featherweight",
+      "medal": "Gold"
+    },      
+    {
+      "name": "Denis Mikhaylovich Ablyazin",
+      "gender": "M",
+      "height": "161",
+      "weight": "62",
+      "sport": "Gymnastics",
+      "team": "Russia",
+      "noc": "RUS",
+      "age": 24,
+      "event": "Gymnastics Men's Horse Vault",
+      "medal": "Silver"
+    },    
+    {
+      "name": "Giovanni Abagnale",
+      "gender": "M",
+      "height": "198",
+      "weight": "90",
+      "sport": "Rowing",
+      "team": "Italy",
+      "noc": "ITA",
+      "age": 21,
+      "event": "Rowing Men's Coxless Pairs",
+      "medal": "Bronze"
+    }, 
+  ]
 
+//test funcion filtrar por tipo de medalla
 describe(filtrarMedallas, () => {
   it('Deberia mostrar las medallas por tipo oro', () => {
     const dataOro = [
@@ -261,6 +314,118 @@ describe(filtrarMedallas, () => {
       },
     ]
     expect(filtrarMedallas("Bronze", muestraData)).toEqual(dataBronce);
+  });
+});
+
+//test funcion ordenar de A-z y Z-A
+describe(ordenarPaises, () => {
+  it('Debe ordenadar los nombres de los paises de la A a la Z', () => {
+    
+    const ordenandoAz = [
+      {
+        "name": "Matthew \"Matt\" Abood",
+        "gender": "M",
+        "height": "197",
+        "weight": "92",
+        "sport": "Swimming",
+        "team": "Australia",
+        "noc": "AUS",
+        "age": 30,
+        "event": "Swimming Men's 4 x 100 metres Freestyle Relay",
+        "medal": "Bronze"
+      },      
+      {
+        "name": "Giovanni Abagnale",
+        "gender": "M",
+        "height": "198",
+        "weight": "90",
+        "sport": "Rowing",
+        "team": "Italy",
+        "noc": "ITA",
+        "age": 21,
+        "event": "Rowing Men's Coxless Pairs",
+        "medal": "Bronze"
+      },      
+      {
+        "name": "Ahmad Abughaush",
+        "gender": "M",
+        "height": "178",
+        "weight": "68",
+        "sport": "Taekwondo",
+        "team": "Jordan",
+        "noc": "JOR",
+        "age": 20,
+        "event": "Taekwondo Men's Featherweight",
+        "medal": "Gold"
+      },      
+      {
+        "name": "Denis Mikhaylovich Ablyazin",
+        "gender": "M",
+        "height": "161",
+        "weight": "62",
+        "sport": "Gymnastics",
+        "team": "Russia",
+        "noc": "RUS",
+        "age": 24,
+        "event": "Gymnastics Men's Horse Vault",
+        "medal": "Silver"
+      },
+    ]
+    expect(ordenarPaises("AZ", muestraDesordenada) ).toEqual(ordenandoAz);
+  });
+
+  it('Debe ordenadar los nombres de los paises de la Z a la A', () => {
+    const ordenandoZa = [
+      {
+        "name": "Denis Mikhaylovich Ablyazin",
+        "gender": "M",
+        "height": "161",
+        "weight": "62",
+        "sport": "Gymnastics",
+        "team": "Russia",
+        "noc": "RUS",
+        "age": 24,
+        "event": "Gymnastics Men's Horse Vault",
+        "medal": "Silver"
+      },      
+      {
+        "name": "Ahmad Abughaush",
+        "gender": "M",
+        "height": "178",
+        "weight": "68",
+        "sport": "Taekwondo",
+        "team": "Jordan",
+        "noc": "JOR",
+        "age": 20,
+        "event": "Taekwondo Men's Featherweight",
+        "medal": "Gold"
+      },
+      {
+        "name": "Giovanni Abagnale",
+        "gender": "M",
+        "height": "198",
+        "weight": "90",
+        "sport": "Rowing",
+        "team": "Italy",
+        "noc": "ITA",
+        "age": 21,
+        "event": "Rowing Men's Coxless Pairs",
+        "medal": "Bronze"
+      },      
+      {
+        "name": "Matthew \"Matt\" Abood",
+        "gender": "M",
+        "height": "197",
+        "weight": "92",
+        "sport": "Swimming",
+        "team": "Australia",
+        "noc": "AUS",
+        "age": 30,
+        "event": "Swimming Men's 4 x 100 metres Freestyle Relay",
+        "medal": "Bronze"
+      },           
+    ]
+    expect(ordenarPaises("ZA", muestraDesordenada) ).toEqual(ordenandoZa);
   });
 });
 
