@@ -15,6 +15,19 @@ const container = document.querySelector('.container')
 const listaPaises = document.querySelector('.listaPaises')
 const medalleria = document.querySelector('.medallero')
 
+let bienvenida = document.getElementById('miModal')
+let flex = document.getElementById('flex')
+let cerrar = document.getElementById('close')
+
+cerrar.addEventListener('click', function() {
+     bienvenida.style.display ='none';
+});
+
+window.addEventListener('click', function(evento){
+     if(evento.target == flex){
+          bienvenida.style.display ='none'; 
+     }
+}); 
 
 //const de las li de nav
 const inicio = document.querySelector('#inicio')
@@ -22,6 +35,7 @@ const paisesPar = document.querySelector('#paisesPar')
 const medallero = document.querySelector('#medalleroNav')
 const deportes = document.querySelector('#deportes')
 const atletas = document.querySelector('#atletas')
+
 
 //mostra portada
 function mostrarPortada() {

@@ -9,17 +9,94 @@ body {
     background-image: url(img/fondoazul.png);
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
 
+/*estilo para la pag de saludo o bienvenida*/
+.flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.contenidoModal {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    width: 30%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+
+    animation-name: modal;
+    animation-duration: 1s;
+}
+
+@keyframes modal {
+    from {
+        top: -330px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.close {
+    width: 40px ;
+    height: 40px;
+    text-align: center;
+    background: darkred;
+    border-radius: 50%;
+    color: #f2f2f2;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.close:hover {
+    color: #7f8c8d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalHeader,
+.footer {
+    padding: 8px 16px;
+    background: #34495e;
+    color: #f2f2f2;
+}
+
+.modalBody {
+    padding: 8px 16px;
 }
 
 .encabezado {
-    background-color: #ffff;
+
+    width: 100%;
     height: 80px;
     position: fixed;
-    width: 100%;
+    background-color: #ffff;
+    background-size: cover;
+
     top: 0;
     left: 0;
     text-shadow: rgb(0, 0, 150) 1px 1px 5px;
+
 }
 
 .nav {
@@ -135,8 +212,8 @@ main {
 .mascota2{
     float: right;
 } */
-  
- 
+
+
 figure {
     text-align: center;
 }
@@ -174,35 +251,35 @@ td {
     width: auto;
     text-align: center;
     border: 1px solid #000;
-    border-spacing: 0;     
+    border-spacing: 0;
 }
 
 /* diseño del select */
-select{
+select {
     max-width: 300px;
-	position: relative;
+    position: relative;
 
     display: inline-block;
-	width: 100%;
-	cursor: pointer;
-  	padding: 7px 10px;
-  	height: 42px;
-  	outline: 0; 
-  	border: 0;
-	border-radius: 0;
-	background: #f0f0f0;
-	color: #7b7b7b;
-	font-size: 1em;
-	color: rgb(13, 1, 1);
-	font-family: 
-	'Quicksand', sans-serif;
-	border:2px solid rgba(0,0,0,0.2);
+    width: 100%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #7b7b7b;
+    font-size: 1em;
+    color: rgb(13, 1, 1);
+    font-family:
+        'Quicksand', sans-serif;
+    border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     position: relative;
-    transition: all 0.25s ease;    
+    transition: all 0.25s ease;
 }
 
-select:hover{
+select:hover {
     background: #2fc3f0;
 }
 
@@ -395,6 +472,10 @@ footer {
         height: 300px;
         height: 180px;
         margin: 10px auto;
+    }
+
+    .contenidoModal{
+        width: 70%;
     }
 
 }

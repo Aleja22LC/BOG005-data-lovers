@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+  <!-- creo encabezado de la pagina -->
   <header class="encabezado">
     <nav class="nav">
       <a href="#" class="logo nav-link">
@@ -33,6 +33,28 @@
     </nav>
   </header>
 
+  <!-- creo pagina de bienvenida modal -->
+  <section id="miModal" class="modal">
+    <div class="flex" id="flex">
+      <div class="contenidoModal">
+        <div class="modalHeader flex">
+          <h2>Aleja Desing</h2>
+          <span class="close" id="close">&times;</span>
+        </div>
+        <div class="modalBody">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente odit laboriosam aut corporis sed,
+            eos molestiae culpa dignissimos iusto illum fugiat consectetur voluptatibus non aspernatur omnis nostrum ea
+            amet praesentium harum ullam placeat, nobis deleniti? Odio debitis vero iusto porro unde, libero, facilis
+            deserunt excepturi iure facere nostrum soluta accusantium doloribus voluptates recusandae quae, quod dolore
+            culpa rerum sapiente vitae quo magnam sequi. Nulla fugiat placeat ut eaque quas.</p>
+        </div>
+        <div class="footer">
+          <h3>Hecho por &copy; Alejandra Design </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- creo seccion de inicio con informacion general de los olimpicos rio 2016 -->
   <main class="portada">
     <h1 class="tituloPortada">JUEGOS OLIMPICOS RIO 2016</h1><br>
@@ -52,17 +74,6 @@
       evento deportivo, pero tras una primera etapa de evaluación, la lista fue reducida a cuatro ciudades: Chicago, Río
       de Janeiro, Madrid y Tokio. De estas, la ciudad brasileña fue elegida en la cxxi Sesión del COI, el 2 de octubre
       de 2009, celebrada en Copenhague.<br><br>
-      La elección de Río marcó la primera vez en que Brasil ha sido designado como sede de los Juegos Olímpicos. Además,
-      es la primera vez que se realiza un evento olímpico en un país lusófono, la primera vez que se realiza en un país
-      sudamericano, la segunda en un país de Latinoamérica la primera edición fue México 1968, la tercera vez que
-      ocurren en el hemisferio sur previamente fueron Melbourne 1956 y Sídney 2000 y la séptima en un país del
-      continente americano previamente fueron San Luis 1904, Los Ángeles 1932, México 1968, Montreal 1976, Los Ángeles
-      1984 y Atlanta 1996. A todo lo anterior, se incluye el dato de ser el cuarto país que organiza de forma
-      consecutiva la Copa Mundial de Fútbol y los Juegos Olímpicos (México en 1968 y 1970; Alemania en 1972 y 1974; y
-      Estados Unidos en 1994 y 1996).
-      La organización del evento estuvo envuelta en diversas controversias, como la inestabilidad política del país, la
-      presencia del virus del Zika y los significativos niveles de contaminación en la bahía de Guanabara. Además, un
-      escándalo de dopaje impidió la participación de 118 atletas rusos en los Juegos.</p> <br>
 
     <h1>ANTECEDENTES</h1>
     <figure>
@@ -80,11 +91,7 @@
       además fue la primera sede olímpica ubicada en el hemisferio sur); posteriormente, también lo intentó para los
       Juegos Olímpicos de 1968 y de 2004 sin resultado favorable: quedó en el último lugar de las votaciones. En esta
       penúltima candidatura, la elección fue ganada por la Ciudad de México, lo que la convirtió en la ciudad que
-      recibió los primeros Juegos Olímpicos para Latinoamérica.<br><br>
-      Río de Janeiro se postuló a ser sede de los Juegos Olímpicos de 1936, 1940, 1956, 1960, 2004 y 2012, todas con
-      resultados desfavorables sin clasificarse siquiera a la ronda final de votación. En el último proceso en el que
-      presentó candidatura, finalmente ganado por Londres, Río de Janeiro no pasó la etapa de evaluación, obteniendo una
-      calificación de 6.0 de un máximo de 10.</p> <br>
+      recibió los primeros Juegos Olímpicos para Latinoamérica.</p> <br>
 
     <h2>Mascotas de las Olimpiadas Rio 2016</h2><br>
 
@@ -132,7 +139,6 @@
     <button class="btnLupa" id="btnLupa"><img src="/src/img/lupa.png" alt="buscador" height="20px"
         width="20px"></button>
 
-    <!-- <ol id="resultado" class="lista"></ol> -->
     <ol>
       <table class="tablaPais" id="tablaPais">
         <thead>
@@ -149,13 +155,12 @@
         </tbody>
       </table>
     </ol>
-
   </section>
 
   <!-- medallero -->
   <section class="medallero" id="medallero">
     <figure><img src="/src/img/medallas.png" alt="MedallasOlimpicas" class="medallas"></figure>
-    
+
     <select name="tipoMedallas" id="medallas" class="medallas">
       <option value="SelectMedal">Seleccionar Medalla</option>
       <option value="Gold">Oro</option>
