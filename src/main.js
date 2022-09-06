@@ -19,15 +19,15 @@ let bienvenida = document.getElementById('miModal')
 let flex = document.getElementById('flex')
 let cerrar = document.getElementById('close')
 
-cerrar.addEventListener('click', function() {
-     bienvenida.style.display ='none';
+cerrar.addEventListener('click', function () {
+     bienvenida.style.display = 'none';
 });
 
-window.addEventListener('click', function(evento){
-     if(evento.target == flex){
-          bienvenida.style.display ='none'; 
+window.addEventListener('click', function (evento) {
+     if (evento.target == flex) {
+          bienvenida.style.display = 'none';
      }
-}); 
+});
 
 //const de las li de nav
 const inicio = document.querySelector('#inicio')
@@ -37,54 +37,35 @@ const deportes = document.querySelector('#deportes')
 const atletas = document.querySelector('#atletas')
 
 
-//mostra portada
-function mostrarPortada() {
-     portada.style.display = "block"
-     container.style.display = "none"
-     listaPaises.style.display = "none"
+function navegacion(section) {
      medalleria.style.display = "none"
-}
-mostrarPortada()
-
-//mostrar container atletas
-function mostrarContainer() {
-     container.style.display = "block"
-     portada.style.display = "none"
-     listaPaises.style.display = "none"
-     medalleria.style.display = "none"
-}
-mostrarContainer()
-
-//mostrar lista de paises
-function mostrarlistaPaises() {
-     listaPaises.style.display = "block"
-     portada.style.display = "none"
-     container.style.display = "none"
-     medalleria.style.display = "none"
-}
-mostrarlistaPaises()
-
-//mostrar tabla de medallero
-function mostrarMedallero() {
-     medalleria.style.display = "block"
      listaPaises.style.display = "none"
      portada.style.display = "none"
      container.style.display = "none"
+     if(section === "medalleria"){
+          medalleria.style.display = "block"
+     }else if(section === "portada"){
+          portada.style.display = "block"
+     }else if (section === "listaPaises"){
+          listaPaises.style.display = "block"
+     }else if(section === "container"){
+          container.style.display = "block"
+     }    
+       
 }
-mostrarMedallero()
 
 //crear eventos para los li del nav-menu
 inicio.addEventListener("click", () => {
-     mostrarPortada()
+     navegacion('portada')
 })
 
 paisesPar.addEventListener("click", () => {
-     mostrarlistaPaises()
+     navegacion('listaPaises')
      pintarPaises(dataAtletas)
 })
 
 medallero.addEventListener("click", () => {
-     mostrarMedallero()
+     navegacion('medalleria')
      pintarData(dataAtletas)
 })
 
@@ -93,7 +74,7 @@ deportes.addEventListener("click", () => {
 })
 
 atletas.addEventListener("click", () => {
-     mostrarContainer()
+     navegacion('container')
 })
 
 //Nav - boton hamburguesa
@@ -109,33 +90,6 @@ navToggle.addEventListener("click", () => {
           navToggle.setAttribute("aria-label", "Abrir Menú")
      }
 });
-
-// //funcionalida buscar paises
-// const buscador= document.querySelector('#buscador');
-// const btnLupa= document.querySelector('#btnLupa');
-// let resultado= document.querySelector ('#resultado');
-
-// const encontrar = () => {
-//      //console.log(buscador.value);
-//      document.resultado.innerHTML = '';
-//      //guardar el texto que escribe el usuario
-//      const texto = buscador.value.toLowerCase();
-//      for (let equipo of dataAtletas){
-//           let nombre = equipo.team.toLowerCase();
-//           if (nombre.indexOf(texto) !== -1){
-//                resultado.innerHTML += `
-//                <li>${dataAtletas}</li>
-//                `
-//           }
-//      }
-//      if (resultado.innerHTML === ''){
-//           resultado.innerHTML += `
-//           <li>Pais no encontrado...</li>
-//           `
-//      }
-// }
-// btnLupa.addEventListener ('click', encontrar)
-// buscador.addEventListener ('keyup', encontrar)
 
 //Función sin retorno que pintará un template de lista países
 const pintarPaises = (dataAtletas) => {

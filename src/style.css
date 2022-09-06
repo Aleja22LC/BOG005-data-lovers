@@ -8,10 +8,18 @@ body {
     padding: 90px 20px 0;
     background-image: url(img/fondoazul.png);
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: cursive, sans-serif;
     font-size: 20px;
-    font-weight: bold;
+   
 }
+.medallero, .listaPaises, .container{
+    display: none;
+}
+
+.portada{
+    display:block;
+}
+
 
 /*estilo para la pag de saludo o bienvenida*/
 .flex {
@@ -38,10 +46,19 @@ body {
     background-color: #fefefe;
     margin: auto;
     width: 30%;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
 
     animation-name: modal;
     animation-duration: 1s;
+}
+
+.saludo, .pieSaludo{
+    font-family: cursive;
+    text-align: center;
+}
+
+.imgSaludo{
+    text-align: center;
 }
 
 @keyframes modal {
@@ -57,7 +74,7 @@ body {
 }
 
 .close {
-    width: 40px ;
+    width: 40px;
     height: 40px;
     text-align: center;
     background: darkred;
@@ -65,7 +82,7 @@ body {
     color: #f2f2f2;
     font-size: 30px;
     font-weight: bold;
-    
+
 }
 
 .close:hover {
@@ -77,7 +94,7 @@ body {
 .modalHeader,
 .footer {
     padding: 8px 16px;
-    background: #34495e;
+    background: #167ce2;
     color: #f2f2f2;
 }
 
@@ -85,8 +102,8 @@ body {
     padding: 8px 16px;
 }
 
+/* cabecera */
 .encabezado {
-
     width: 100%;
     height: 80px;
     position: fixed;
@@ -96,9 +113,9 @@ body {
     top: 0;
     left: 0;
     text-shadow: rgb(0, 0, 150) 1px 1px 5px;
-
+    z-index: 1;
 }
-
+/* boton hamburguesa y navegador */
 .nav {
     display: flex;
     justify-content: space-around;
@@ -174,15 +191,6 @@ p {
     text-align: justify;
 }
 
-.aros {
-    border-radius: 20%;
-    height: 500px;
-    height: 300px;
-    /* margin: 10px 10px 10px 600px; */
-    margin: 10px auto;
-    display: block;
-}
-
 h1 {
     /* text-transform: uppercase; */
     text-align: center;
@@ -197,62 +205,23 @@ main {
 }
 
 /* arreglo posiciones de imagenes del inicio */
-/* .mascotasAbrazadas {
-    display: flex;
-}*/
-/* .mascota1 {
-    float: left;
-    width: 100px;
-  height: 100px;
-  margin: 3px;
-  padding: 3px;
-  border: black 2px solid;
+.mascotasAbrazadas {
+    text-align: center;    
+}
+
+ .mascota1 {
+    position: relative;
+    top: 30px;
+    left:350px;
 }
 
 .mascota2{
-    float: right;
-} */
+    position: relative;
+    bottom:320px;
+    left: 850px;
+} 
 
 
-figure {
-    text-align: center;
-}
-
-/* diseño tablas */
-.tablaPais {
-    width: auto;
-    border: 1px solid #000;
-    border-spacing: 0;
-    padding: 0.3em;
-    border-collapse: separate;
-}
-
-.tablaMedallas {
-    width: 100%;
-    border: 1px solid #000;
-    border-spacing: 0;
-    padding: 0.3em;
-}
-
-tr:nth-child(odd) {
-    background-color: rgb(162, 230, 242);
-}
-
-tr:nth-child(even) {
-    background-color: rgb(121, 198, 252);
-}
-
-th {
-    background-color: white;
-}
-
-th,
-td {
-    width: auto;
-    text-align: center;
-    border: 1px solid #000;
-    border-spacing: 0;
-}
 
 /* diseño del select */
 select {
@@ -283,6 +252,100 @@ select:hover {
     background: #2fc3f0;
 }
 
+/* pestaña de paises participantes */
+.buscador {
+    margin: 2px;
+    position: relative;
+    left:550px;
+}
+
+.btnLupa {
+    margin-bottom: 2px;
+    position: relative;
+    left:550px;
+}
+
+label, .buscador{
+    justify-self: start;
+    text-align: center;
+}
+
+.buscar {
+    font-size: 10px;
+    margin-top: 10px 30px 30px;
+    text-align: center;
+}
+
+.listaPaises{
+    background-image: url(/src/img/mapamundi.png) ;
+}
+#buscar1 {
+    border-radius: 10px;
+    height: 80px;
+    width: 25%;
+    margin-top: 50px 50px;
+    max-height: 30px;
+    position: relative;
+    left: 20px;
+}
+.buscar1::placeholder {
+    background-image: url(/src/img/buscarPais.png);
+    background-size: 25px 25px;
+    background-position: 95% center;
+    background-repeat: no-repeat;    
+}
+
+.tablaPais{
+    width: 50%;
+    height: 200px;    
+    border: 1px solid #000;
+    border-spacing: 0;
+    padding: 0.3em;
+    border-collapse: separate;
+
+    position: relative;
+    left:380px;
+}
+
+.cabeza{
+    background: linear-gradient(rgb(125, 113, 250) 22%, rgba(13, 189, 243, 0.583) 53%);
+}
+
+/* pagina medallero */
+.medallasImg{
+    position: relative;
+    left: 600px;
+}
+
+.tablaMedallas {
+    width: 100%;
+    border: 1px solid #000;
+    border-spacing: 0;
+    padding: 0.3em;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(162, 230, 242);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(121, 198, 252);
+}
+
+th {
+    background-color: white;
+}
+
+th,
+td {
+    width: auto;
+    text-align: center;
+    border: 1px solid #000;
+    border-spacing: 0;
+}
+
+/* tabla atletas */
+
 /* pie de pagina */
 footer {
     clear: both;
@@ -290,107 +353,6 @@ footer {
     padding: 20px;
     border-top: 2px solid #9999;
 }
-
-/* pestaña de paises participantes */
-.buscador {
-    margin: 2px;
-}
-
-.btnLupa {
-    margin-bottom: 2px;
-}
-
-/* arreglo de las tarjetas de los atletas */
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 740px;
-    gap: 15px;
-    margin: 0 auto;
-    justify-items: right;
-    align-items: right;
-}
-
-.tarjeta {
-    height: 250px;
-    width: 300px;
-    overflow: hidden;
-    margin: auto;
-    padding: 10px 30px;
-    border-radius: 2%;
-    border: 1px solid #fff;
-    transition: all .4s ease-in-out;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    background: linear-gradient(-165deg, rgb(62, 212, 238), rgb(81, 247, 56));
-}
-
-.tarjeta:hover {
-    height: 500px;
-    width: 300px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.tarjetaImg img {
-    position: relative;
-    border-radius: 50%;
-    display: block;
-    height: 150px;
-    width: 150px;
-    border-top: 8px solid #fff;
-    border-bottom: 8px solid #fff;
-    object-fit: contain;
-    margin: 20px auto;
-    transition: all 0.3s ease;
-}
-
-.tarjetaImg {
-    position: relative;
-}
-
-.tarjetaImg:before,
-.tarjetaImg:after {
-    content: '';
-    position: absolute;
-    opacity: .7;
-}
-
-.tarjetaImg:after {
-    border-radius: 70%;
-    z-index: 20;
-    background-color: aquamarine;
-    width: 60px;
-    height: 60px;
-    top: 0;
-    right: 40px;
-}
-
-.tarjetaImg:before {
-    width: 70px;
-    height: 70px;
-    bottom: 0;
-    left: 25px;
-    border-radius: 50px;
-    background-color: rgb(244, 76, 219);
-    transform: rotate(100deg);
-}
-
-.info-personal:nth-child(1) {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;
-    line-height: 25px;
-}
-
-.info-personal:nth-child(2) {
-    margin: 15px 0;
-}
-
-.info-personal {
-    color: black;
-}
-
 
 /* diseño de dispositivo movil menos de 768px */
 @media (max-width: 768px) {
@@ -466,21 +428,13 @@ footer {
         margin: auto;
     }
 
-    .aros {
-        border-radius: 20%;
-        display: block;
-        height: 300px;
-        height: 180px;
-        margin: 10px auto;
-    }
-
-    .contenidoModal{
+    .contenidoModal {
         width: 70%;
     }
 
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
     }
@@ -490,4 +444,4 @@ footer {
     .container {
         gap: 5px;
     }
-}
+} */

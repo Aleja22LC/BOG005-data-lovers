@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Lovers</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/4ab580ae48.js" crossorigin="anonymous"></script>
 </head>
@@ -38,18 +37,15 @@
     <div class="flex" id="flex">
       <div class="contenidoModal">
         <div class="modalHeader flex">
-          <h2>Aleja Desing</h2>
+          <h2 class="saludo">Bienvenidos Amantes de las Olimpiadas</h2>
           <span class="close" id="close">&times;</span>
         </div>
         <div class="modalBody">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente odit laboriosam aut corporis sed,
-            eos molestiae culpa dignissimos iusto illum fugiat consectetur voluptatibus non aspernatur omnis nostrum ea
-            amet praesentium harum ullam placeat, nobis deleniti? Odio debitis vero iusto porro unde, libero, facilis
-            deserunt excepturi iure facere nostrum soluta accusantium doloribus voluptates recusandae quae, quod dolore
-            culpa rerum sapiente vitae quo magnam sequi. Nulla fugiat placeat ut eaque quas.</p>
+          <figure class="imgSaludo"><img src="/src/img/FondoInicial.jpg" alt="inicial" width="300px" height="500px">
+          </figure>
         </div>
         <div class="footer">
-          <h3>Hecho por &copy; Alejandra Design </h3>
+          <h3 class="pieSaludo">Derechos Reservados &copy; 2022 </h3>
         </div>
       </div>
     </div>
@@ -74,30 +70,14 @@
       evento deportivo, pero tras una primera etapa de evaluación, la lista fue reducida a cuatro ciudades: Chicago, Río
       de Janeiro, Madrid y Tokio. De estas, la ciudad brasileña fue elegida en la cxxi Sesión del COI, el 2 de octubre
       de 2009, celebrada en Copenhague.<br><br>
-
-    <h1>ANTECEDENTES</h1>
-    <figure>
-      <img src="/src/img/arosolimpicos.png" alt="aros olimpicos" class="aros">
-    </figure>
-    <p>Durante los años 1930, nació y creció la idea de que América del Sur fuera sede de unos Juegos Olímpicos ante el
-      evidente crecimiento del deporte latinoamericano que se daban desde la década de 1920 con destacadas
-      participaciones de atletas hispanos en diversas competencias mundiales así como justas olímpicas que se
-      desarrollaban desde estos tiempos. Río de Janeiro y la capital de Argentina, Buenos Aires fueron las primeras
-      ciudades latinoamericanas en mostrar su interés por acoger el evento cuando ambas presentaron su candidatura para
-      ser sede de los Juegos Olímpicos de 1936, junto a otras nueve ciudades y en cuya elección, finalmente ganada por
-      Berlín, fue un fracaso al no haber obtenido voto alguno. Buenos Aires fue la ciudad que persistió más en tratar de
-      obtener una sede y tuvo la oportunidad más clara de llevar los Juegos Olímpicos a Sudamérica en 1949 cuando perdió
-      por tan solo un voto en la elección de la sede de los Juegos Olímpicos de 1956 ante Melbourne, Australia (que
-      además fue la primera sede olímpica ubicada en el hemisferio sur); posteriormente, también lo intentó para los
-      Juegos Olímpicos de 1968 y de 2004 sin resultado favorable: quedó en el último lugar de las votaciones. En esta
-      penúltima candidatura, la elección fue ganada por la Ciudad de México, lo que la convirtió en la ciudad que
-      recibió los primeros Juegos Olímpicos para Latinoamérica.</p> <br>
+    <p>Para mas informacion sobre <i>los Juegos Olimpicos Rio 2016</i>, click aqui: <a
+        href="https://es.wikipedia.org/wiki/Juegos_Ol%C3%ADmpicos_de_R%C3%ADo_de_Janeiro_2016"><i>Mas
+          Información.</i></a></p><br>
 
     <h2>Mascotas de las Olimpiadas Rio 2016</h2><br>
 
-    <figure>
-      <img src="/src/img/mascotasAbrazadas.png" alt="Mascotas Rio 2016" class="mascotasAbrazadas" height="300px"
-        width="300px">
+    <figure class="mascotasAbrazadas">
+      <img src="/src/img/mascotasAbrazadas.png" alt="Mascotas Rio 2016" height="300px" width="300px">
       <figcaption>Mascotas Embajadoras de Olimpiadas Rio 2016.<br> Creador por: <strong><i>Birdo Produções</i></strong>
       </figcaption><br>
     </figure>
@@ -118,15 +98,13 @@
         constantemente, creciendo y superando obstáculos. Puede sacar cualquier cosa de su gran cabeza, formada por
         hojas, para resolver problemas.</i>
     </p>
-    <figure>
-      <img src="/src/img/mascota1.png" alt="Vinicius Mascota Olimpicos Rio 2016" class="mascota1" height="300px"
-        width="300px">
+    <figure class="mascota1">
+      <img src="/src/img/mascota1.png" alt="Vinicius Mascota Olimpicos Rio 2016" height="300px" width="300px">
       <figcaption>Vinicius Mascota Olimpicos Rio 2016. <br> Creador por: <strong><i>Birdo Produções</i></strong>
       </figcaption>
     </figure>
-    <figure>
-      <img src="/src/img/mascota2.png" alt="Tom Mascota Paralimpicos Rio 2016" class="mascota2" height="300px"
-        width="300px">
+    <figure class="mascota2">
+      <img src="/src/img/mascota2.png" alt="Tom Mascota Paralimpicos Rio 2016" height="300px" width="300px">
       <figcaption>Tom Mascota Paralimpicos Rio 2016. <br> Creador por: <strong><i>Birdo Produções</i></strong>
       </figcaption>
     </figure>
@@ -135,16 +113,23 @@
   <!-- creo lista o tabla de paises participantes en las olimpiadas rio2016 -->
   <section id="listaPaises" class="listaPaises ">
     <h1>Paises Participantes en las Olimpiadas Rio 2016</h1><br>
-    <input type="text" name="buscarPais" id="buscador" class="buscador" placeholder="Buscar Pais">
-    <button class="btnLupa" id="btnLupa"><img src="/src/img/lupa.png" alt="buscador" height="20px"
-        width="20px"></button>
+    <section class="filtrando">
+      <label class="buscador" placeholder="Buscar Pais">Pais
+        <select id="selecccionarPais" size="1"></select>
+      </label>
+      <button type="button" class="btnLupa" id="btnLupa"><img src="/src/img/lupa.png" alt="buscador" height="25px"
+          width="25px"></button>
+    </section><br>
 
-    <ol>
+    <section class="buscar">
+      <input class="buscar1" type="text" id="buscar1" placeholder="   Buscar por nombre de Pais  " />
+    </section><br>    
+    
       <table class="tablaPais" id="tablaPais">
-        <thead>
+        <thead >
           <tr>
-            <th>TEAM</th>
-            <th>PAIS</th>
+            <th class="cabeza">TEAM</th>
+            <th class="cabeza">PAIS</th>
           </tr>
         </thead>
         <tbody id="cuerpo0">
@@ -154,12 +139,12 @@
           </tr>
         </tbody>
       </table>
-    </ol>
+    
   </section>
 
   <!-- medallero -->
   <section class="medallero" id="medallero">
-    <figure><img src="/src/img/medallas.png" alt="MedallasOlimpicas" class="medallas"></figure>
+    <figure><img src="/src/img/medallas.png" alt="MedallasOlimpicas" class="medallasImg"></figure>
 
     <select name="tipoMedallas" id="medallas" class="medallas">
       <option value="SelectMedal">Seleccionar Medalla</option>
@@ -172,8 +157,6 @@
       <option value="AZ">Ordenar de la "A - Z"</option>
       <option value="ZA">Ordenar de la "Z - A"</option>
     </select>
-
-
 
     <table class="tablaMedallas" id="tablaMedallas">
       <thead>
@@ -198,65 +181,10 @@
 
   </section>
 
-  <!-- creo seccion para las tarjetas de los atletas y su respectiva informacion -->
+  <!-- creo seccion para los atletas y su respectiva informacion -->
   <section class="container">
 
-    <article class="tarjeta">
-      <div class="tarjetaImg">
-        <img src="/src/img/iconohombre.png" alt="icono hombre">
-      </div>
-      <div class="tarjetaContenido">
-        <h2 class="info-personal desplazar Nombre">Nombre Atleta</h2>
-        <h3 class="info-personal desplazar deporte">Especialidad Deportiva:<br></h3>
-        <div>
-          <p class="info-personal desplazar">Altura:<br></p>
-        </div>
-        <div>
-          <p class="info-personal desplazar">Peso:<br></p>
-        </div>
-        <div>
-          <p class="info-personal desplazar">Pais:<br></p>
-        </div>
-      </div>
-    </article>
 
-    <article class="tarjeta">
-      <div class="tarjetaImg">
-        <img src="/src/img/iconohombre.png" alt="icono hombre">
-      </div>
-      <div class="tarjetaContenido">
-        <h2 class="info-personal desplazar Nombre">Nombre Atleta</h2>
-        <h3 class="info-personal desplazar deporte">Especialidad Deportiva:<br></h3>
-        <div>
-          <p class="info-personal desplazar">Altura:<br></p>
-        </div>
-        <div>
-          <p class="info-personal desplazar">Peso:<br></p>
-        </div>
-        <div>
-          <p class="info-personal desplazar">Pais:<br></p>
-        </div>
-      </div>
-    </article>
-
-    <article class="tarjeta">
-      <div class="tarjetaImg">
-        <img src="/src/img/iconohombre.png" alt="icono hombre">
-      </div>
-      <div class="tarjetaContenido">
-        <h2 class="info-personal desplazar Nombre">Nombre Atleta</h2>
-        <h3 class="info-personal desplazar deporte">Especialidad Deportiva:<br></h3>
-        <div>
-          <p class="info-personal desplazar">Altura:<br></p>
-        </div>
-        <div>
-          <p class="info-personal desplazar">Peso:<br></p>
-        </div>
-        <div>
-          <p class="info-personal desplazar">Pais:<br></p>
-        </div>
-      </div>
-    </article>
 
   </section>
 
