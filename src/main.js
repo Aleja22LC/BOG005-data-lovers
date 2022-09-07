@@ -1,6 +1,6 @@
 import data from './data/athletes/athletes.js';
 //import {filtrarPaises} from './data';
-import { filtrarMedallas, filtrarPaises, ordenarPaises } from './data.js';
+import { filtrarMedallas, filtrarPaises, ordenarPaises, filtrarGenero } from './data.js';
 
 const dataAtletas = data.athletes
 //const dataPaises = dataAtletas.map(elem => elem.team))
@@ -65,17 +65,15 @@ inicio.addEventListener("click", () => {
 
 paisesPar.addEventListener("click", () => {
      navegacion('listaPaises')
-     pintarPaises(dataAtletas)
+     
 })
 
 medallero.addEventListener("click", () => {
-     navegacion('medalleria')
-     pintarData(dataAtletas)
+     navegacion('medalleria')     
 })
 
 deportes.addEventListener("click", () => {
-     navegacion('deporte')
-     pintarDeportes(dataAtletas)
+     navegacion('deporte')     
 })
 
 atletas.addEventListener("click", () => {
@@ -201,3 +199,33 @@ const pintarDeportes = (dataAtletas) => {
 }
 pintarDeportes(dataAtletas)
 
+//Función que pintará atletas y su informacion
+const pintarAtletas = (dataAtletas) => {
+     let plantillaAtletas = ""
+     dataAtletas.forEach((element) => {
+          //console.log(element)
+          plantillaAtletas += `
+                    <tr>
+                    <th>${element.team}</th>
+                    <th>${element.name}</th>
+                    <th>${element.weight}</th>
+                    <th>${element.height}</th>
+                    <th>${element.age}</th>
+                    <th>${element.gender}</th>
+                    <th>${element.event}</th>                    
+                    </tr>
+                    
+                     `
+     })
+     document.getElementById("cuerpo3").innerHTML = plantillaAtletas;
+}
+pintarAtletas(dataAtletas)
+
+//funcion filtrar por genero
+const selecGenero = document.getElementById('genero')
+selecGenero.addEventListener("change", (e) => {
+     let eventoG = e.target.value;
+     let arrayGenero = filtrarGenero(eventoG, dataAtletas);
+
+     pintarAtletas(arrayGenero)   
+});

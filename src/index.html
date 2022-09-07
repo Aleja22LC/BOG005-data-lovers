@@ -34,21 +34,21 @@
 
   <!-- creo pagina de bienvenida modal -->
   <section id="miModal" class="modal">
-    <div class="flex" id="flex">
-      <div class="contenidoModal">
-        <div class="modalHeader flex">
+    <section class="flex" id="flex">
+      <section class="contenidoModal">
+        <section class="modalHeader flex">
           <h2 class="saludo">Bienvenidos Amantes de las Olimpiadas</h2>
           <span class="close" id="close">&times;</span>
-        </div>
-        <div class="modalBody">
+        </section>
+        <section class="modalBody">
           <figure class="imgSaludo"><img src="/src/img/FondoInicial.jpg" alt="inicial" width="300px" height="500px">
           </figure>
-        </div>
-        <div class="footer">
+        </section>
+        <section class="footer">
           <h3 class="pieSaludo">Derechos Reservados &copy; 2022 </h3>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </section>
   </section>
 
   <!-- creo seccion de inicio con informacion general de los olimpicos rio 2016 -->
@@ -119,7 +119,7 @@
           <option value="all"> Selecciona un Pais</option>
         </select>
       </label>
-      
+
     </section><br>
 
     <table class="tablaPais" id="tablaPais">
@@ -178,28 +178,59 @@
 
   </section>
 
-    <!-- seccion deportes -->
-    <section class="deportes" id="deportes">
-     
-      <table class="tablaDeportes" id="tablaDeportes">
-        <thead>
-          <tr>            
-            <th class="cabeza">DEPORTE</th>
-            <th class="cabeza">ESPECIALIDAD</th>           
-          </tr>
-        </thead>
-        <tbody id="cuerpo2">
-          <tr>            
-            <th>sport</th>
-            <th>event</th>            
-          </tr>
-        </tbody>
-      </table>
-  
-    </section>
+  <!-- seccion deportes -->
+  <section class="deportes" id="deportes">
+
+    <table class="tablaDeportes" id="tablaDeportes">
+      <thead>
+        <tr>
+          <th class="cabeza">DEPORTE</th>
+          <th class="cabeza">ESPECIALIDAD</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo2">
+        <tr>
+          <th>sport</th>
+          <th>event</th>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
 
   <!-- creo seccion para los atletas y su respectiva informacion -->
-  <section class="container">
+  <section class="container" id="container">
+
+    <select name="genero" id="genero" class="genero">
+      <option value="">Seleccione Genero</option>
+      <option value="F">Femenino</option>
+      <option value="M">Masculino</option>
+    </select>
+
+    <table class="tablaAtletas" id="tablaAtletas">
+      <thead>
+        <tr>
+          <th class="cabeza">PAIS</th>
+          <th class="cabeza">NOMBRE</th>
+          <th class="cabeza">PESO</th>
+          <th class="cabeza">ALTURA</th>
+          <th class="cabeza">EDAD</th>
+          <th class="cabeza">GENERO</th>
+          <th class="cabeza">ESPECIALIDAD</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo3">
+        <tr>
+          <th>team</th>
+          <th>name</th>
+          <th>weight</th>
+          <th>height</th>
+          <th>age</th>
+          <th>gender</th>
+          <th>event</th>
+        </tr>
+      </tbody>
+    </table>
 
 
 

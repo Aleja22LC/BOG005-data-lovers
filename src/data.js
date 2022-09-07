@@ -15,6 +15,15 @@ export function filtrarPaises(nombrePais, data) {
   return listaNombrePais;
 }
 
+//filtrar por genero
+export function filtrarGenero(tipoGenero, data) {
+  const mof = data.filter(function (datoGenero) {
+    return datoGenero.gender === tipoGenero;
+  })
+  return mof;
+}
+
+
 //ordenar los paises participantes de la A-Z y de la Z-A
 export function ordenarPaises(opcion, data) {
   const copiaData = [...data]

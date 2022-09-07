@@ -312,7 +312,7 @@ label, .buscador{
     left: 600px;
 }
 
-.tablaMedallas {
+.tablaMedallas, .tablaAtletas {
     width: 100%;
     border: 1px solid #000;
     border-spacing: 0;
@@ -344,6 +344,9 @@ td {
 }
 
 /* tabla atletas */
+.container{
+    background-image: url(/src/img/fondoSeccion.jpg);
+}
 
 /* pie de pagina */
 footer {
