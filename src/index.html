@@ -69,7 +69,7 @@
       Siete ciudades presentaron oficialmente ante el Comité Olímpico Internacional su aspiración de albergar este
       evento deportivo, pero tras una primera etapa de evaluación, la lista fue reducida a cuatro ciudades: Chicago, Río
       de Janeiro, Madrid y Tokio. De estas, la ciudad brasileña fue elegida en la cxxi Sesión del COI, el 2 de octubre
-      de 2009, celebrada en Copenhague.<br><br>
+      de 2009, celebrada en Copenhague.</p><br><br>
     <p>Para mas informacion sobre <i>los Juegos Olimpicos Rio 2016</i>, click aqui: <a
         href="https://es.wikipedia.org/wiki/Juegos_Ol%C3%ADmpicos_de_R%C3%ADo_de_Janeiro_2016"><i>Mas
           Información.</i></a></p><br>
@@ -115,31 +115,28 @@
     <h1>Paises Participantes en las Olimpiadas Rio 2016</h1><br>
     <section class="filtrando">
       <label class="buscador" placeholder="Buscar Pais">Pais
-        <select id="selecccionarPais" size="1"></select>
+        <select name="escogerPais" id="selecccionarPais" size="1">
+          <option value="all"> Selecciona un Pais</option>
+        </select>
       </label>
-      <button type="button" class="btnLupa" id="btnLupa"><img src="/src/img/lupa.png" alt="buscador" height="25px"
-          width="25px"></button>
+      
     </section><br>
 
-    <section class="buscar">
-      <input class="buscar1" type="text" id="buscar1" placeholder="   Buscar por nombre de Pais  " />
-    </section><br>    
-    
-      <table class="tablaPais" id="tablaPais">
-        <thead >
-          <tr>
-            <th class="cabeza">TEAM</th>
-            <th class="cabeza">PAIS</th>
-          </tr>
-        </thead>
-        <tbody id="cuerpo0">
-          <tr>
-            <th>noc</th>
-            <th>team</th>
-          </tr>
-        </tbody>
-      </table>
-    
+    <table class="tablaPais" id="tablaPais">
+      <thead>
+        <tr>
+          <th class="cabeza">TEAM</th>
+          <th class="cabeza">PAIS </th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo0">
+        <tr>
+          <th>noc</th>
+          <th>team</th>
+        </tr>
+      </tbody>
+    </table>
+
   </section>
 
   <!-- medallero -->
@@ -180,6 +177,26 @@
     </table>
 
   </section>
+
+    <!-- seccion deportes -->
+    <section class="deportes" id="deportes">
+     
+      <table class="tablaDeportes" id="tablaDeportes">
+        <thead>
+          <tr>            
+            <th class="cabeza">DEPORTE</th>
+            <th class="cabeza">ESPECIALIDAD</th>           
+          </tr>
+        </thead>
+        <tbody id="cuerpo2">
+          <tr>            
+            <th>sport</th>
+            <th>event</th>            
+          </tr>
+        </tbody>
+      </table>
+  
+    </section>
 
   <!-- creo seccion para los atletas y su respectiva informacion -->
   <section class="container">

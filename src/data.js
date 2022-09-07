@@ -7,25 +7,33 @@ export function filtrarMedallas(tipoMedalla, data) {
   return medallas;
 }
 
+//filtrar por nombre de pais
+export function filtrarPaises(nombrePais, data) {
+  const listaNombrePais = data.filter(function (datoPais) {
+    return datoPais.team === nombrePais;
+  })
+  return listaNombrePais;
+}
+
 //ordenar los paises participantes de la A-Z y de la Z-A
 export function ordenarPaises(opcion, data) {
-  const copiaData=[...data]
-  const ordenData= copiaData.sort (function (a,b){
+  const copiaData = [...data]
+  const ordenData = copiaData.sort(function (a, b) {
     if (a.team > b.team) {
       return 1;
     }
     if (a.team < b.team) {
       return -1;
-    }    
+    }
     return 0;
   })
   //console.log('ver: ',ordenData)
 
-  if (opcion == 'AZ'){
+  if (opcion == 'AZ') {
     return ordenData;
-  }else {
+  } else {
     return ordenData.reverse()
-  }  
+  }
 }
 
 //funcion calcular

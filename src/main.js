@@ -1,6 +1,6 @@
 import data from './data/athletes/athletes.js';
 //import {filtrarPaises} from './data';
-import { filtrarMedallas, ordenarPaises } from './data.js';
+import { filtrarMedallas, filtrarPaises, ordenarPaises } from './data.js';
 
 const dataAtletas = data.athletes
 //const dataPaises = dataAtletas.map(elem => elem.team))
@@ -14,6 +14,7 @@ const portada = document.querySelector('.portada')
 const container = document.querySelector('.container')
 const listaPaises = document.querySelector('.listaPaises')
 const medalleria = document.querySelector('.medallero')
+const deporte = document.querySelector('.deportes')
 
 let bienvenida = document.getElementById('miModal')
 let flex = document.getElementById('flex')
@@ -36,12 +37,13 @@ const medallero = document.querySelector('#medalleroNav')
 const deportes = document.querySelector('#deportes')
 const atletas = document.querySelector('#atletas')
 
-
+//simplificacion de las funciones de display none y block
 function navegacion(section) {
      medalleria.style.display = "none"
      listaPaises.style.display = "none"
      portada.style.display = "none"
      container.style.display = "none"
+     deporte.style.display = "none"
      if(section === "medalleria"){
           medalleria.style.display = "block"
      }else if(section === "portada"){
@@ -50,8 +52,10 @@ function navegacion(section) {
           listaPaises.style.display = "block"
      }else if(section === "container"){
           container.style.display = "block"
-     }    
+     }else if(section === "deporte"){
+          deporte.style.display = "block"    
        
+}
 }
 
 //crear eventos para los li del nav-menu
@@ -70,7 +74,8 @@ medallero.addEventListener("click", () => {
 })
 
 deportes.addEventListener("click", () => {
-     alert('hola')
+     navegacion('deporte')
+     pintarDeportes(dataAtletas)
 })
 
 atletas.addEventListener("click", () => {
@@ -107,10 +112,38 @@ const pintarPaises = (dataAtletas) => {
      document.getElementById("cuerpo0").innerHTML = plantilla0;
 }
 pintarPaises(dataAtletas)
-//convertir string en array
 
-//eliminar paises duplicados
+//filtrar por paises
+const selecPais = document.getElementById('selecccionarPais')
+selecPais.addEventListener("change", (e) => {
+     let eventoPais = e.target.value;
+     let arrayPais = filtrarPaises(eventoPais, dataAtletas);
 
+     pintarPaises(arrayPais)
+
+});
+
+//crear opciones del select para seleccionar pais
+function mostrarOpciones () {
+     let paisOlimpiadas = [];
+     let seleccionePais = document.getElementById("selecccionarPais");
+     data.athletes.forEach((atleta) => {
+       if (paisOlimpiadas.indexOf(atleta["team"]) == -1) {
+          paisOlimpiadas.push(atleta["team"]);
+         
+       }
+     });
+     paisOlimpiadas.forEach((element) => {
+       let paises = document.createElement("option");
+   
+       paises.text = element;
+       paises.value = element;
+   
+       seleccionePais.appendChild(paises);
+       
+     })  ;
+   }
+   mostrarOpciones();
 
 //pintar data
 //interaccion con el dom funcion filtrar medallas 
@@ -132,7 +165,7 @@ const pintarData = (data) => {
 }
 pintarData(dataAtletas)
 
-//funcion filtrar
+//funcion filtrar por medallas
 const selecMedalla = document.getElementById('medallas')
 selecMedalla.addEventListener("change", (e) => {
      let evento = e.target.value;
@@ -142,6 +175,7 @@ selecMedalla.addEventListener("change", (e) => {
 
 });
 
+//funciom ordenar a-z z-a
 const selectAz = document.getElementById('ordenAz')
 selectAz.addEventListener("change", (e) => {
      let eventoAz = e.target.value;
@@ -150,11 +184,20 @@ selectAz.addEventListener("change", (e) => {
      pintarData(arrayOrden)
 
 });
-
-
-
-
-
-
-
+//Función sin retorno que pintará los deportes y especialidades
+const pintarDeportes = (dataAtletas) => {
+     let plantillaDeportes = ""
+     dataAtletas.forEach((element) => {
+          //console.log(element)
+          plantillaDeportes += `
+                    <tr>
+                    <th>${element.sport}</th>
+                    <th>${element.event}</th>
+                    </tr>
+                    
+                     `
+     })
+     document.getElementById("cuerpo2").innerHTML = plantillaDeportes;
+}
+pintarDeportes(dataAtletas)
 

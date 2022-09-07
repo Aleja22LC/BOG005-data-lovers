@@ -1,4 +1,4 @@
-import { filtrarMedallas, ordenarPaises } from '../src/data.js';
+import { filtrarMedallas, filtrarPaises, ordenarPaises } from '../src/data.js';
 
 //muestra de la data original para funcion filter
 const muestraData = [
@@ -315,6 +315,30 @@ describe(filtrarMedallas, () => {
     ]
     expect(filtrarMedallas("Bronze", muestraData)).toEqual(dataBronce);
   });
+});
+
+//test funcion filtrar por tipo de medalla
+describe(filtrarPaises, () => {
+  it('Deberia mostrar los paises participantes', () => {
+    const paisParticipante= [
+      {        
+        "team": "Italy",
+        "noc": "ITA",        
+      },
+      {
+        "team": "Jordan",
+        "noc": "JOR",
+        
+      },
+      {
+        
+        "team": "Spain",
+        "noc": "ESP",
+        
+      },
+    ]
+    expect(filtrarPaises("team", muestraData)).toEqual(paisParticipante);
+  });  
 });
 
 //test funcion ordenar de A-z y Z-A
