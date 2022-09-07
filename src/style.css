@@ -12,7 +12,7 @@ body {
     font-size: 20px;
    
 }
-.medallero, .listaPaises, .container, .deportes{
+.medallero, .listaPaises, .container, .deportes1{
     display: none;
 }
 
@@ -339,7 +339,7 @@ td {
     border-spacing: 0;
 }
 /* deportes */
-.deportes {
+.deportes1 {
     background-image: url(/src/img/footer.jpeg);
 }
 
@@ -512,6 +512,8 @@ footer {
     .modalBody {
         padding: 8px 16px;
     }
+
+    
 
 }
 

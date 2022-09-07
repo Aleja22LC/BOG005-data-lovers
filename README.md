@@ -10,7 +10,7 @@
 
 ## Introducción
 
-
+Este proyecto esta basado en los intereses de los amantes del deporte, fundamentalmente en los datos obtenidos tras los juegos olimpicos del 2016.
 
 ## 1. Definición del Proyecto
 
@@ -35,9 +35,6 @@ Al tener el prototipo de baja fidelidad terminado y recibir los feedback de comp
 
 ![prototipoCel](src/img/PrototipoCel.PNG)
 
-Prototipo para PC:
-
-
 
 ## 2. Historias de Usuario
 
@@ -51,14 +48,40 @@ Prototipo para PC:
 
 El desarrollo de estas historias de usuario en el marco del proyecto se basan en generar la satisfaccion de los requerimientos y necesidades que se genaran tras querer adquirir la informacion de un determinado tema de interes, en este caso Los juegos Olimpicos de Rio de Janeiro 2016, cuya informacion estaria disponible de manera accequible en el momento en que se requiera y sera de facil acceso.
 
-**Historia de Usuario #1**
+<!-- **Historia de Usuario #1**
 *YO COMO usuario QUIERO ver la lista de países participantes en los juegos Olímpicos PARA saber si mi país esta en esa lista.*
 
 Criterios de Aceptación:
-* 
+*  -->
+## 3. Proyecto Finalizado
 
+Acontinuacion se refleja la visual de como quedo la pagina de Olimpic Lovers:
 
+**Pagina de saludo o Bienvenida**
 
+![bienvenida](src/img/BienvenidaPag.PNG)
+
+**Pagina de Inicio**
+
+![inicio](src/img/PagInicio.PNG)
+
+**Pagina que muestra la Tabla de Paises**
+
+![paises](src/img/TablaPaises.PNG)
+
+**Pagina que mustra Tabla del Medallero**
+
+![medallero](src/img/TablaMedallero.PNG)
+
+**Pagina que muestra Tabla de Deportes y su respectiva Especialidad**
+
+![deportes](src/img/TablaDeportes.PNG)
+
+**Pagina que muestra la Informacion General de los Atletas**
+
+![atletas](src/img/TablaAtletas.PNG)
+
+##
 
 
 

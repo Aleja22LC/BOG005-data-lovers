@@ -14,7 +14,7 @@ const portada = document.querySelector('.portada')
 const container = document.querySelector('.container')
 const listaPaises = document.querySelector('.listaPaises')
 const medalleria = document.querySelector('.medallero')
-const deporte = document.querySelector('.deportes')
+const deporte = document.querySelector('.deportes1')
 
 let bienvenida = document.getElementById('miModal')
 let flex = document.getElementById('flex')
@@ -34,7 +34,7 @@ window.addEventListener('click', function (evento) {
 const inicio = document.querySelector('#inicio')
 const paisesPar = document.querySelector('#paisesPar')
 const medallero = document.querySelector('#medalleroNav')
-const deportes = document.querySelector('#deportes1')
+const deportes = document.querySelector('#deportes')
 const atletas = document.querySelector('#atletas')
 
 //simplificacion de las funciones de display none y block

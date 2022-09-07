@@ -1,5 +1,5 @@
 import { filtrarGenero, filtrarMedallas, filtrarPaises, ordenarPaises } from '../src/data.js';
-//import {dataAtletas} from '../src/data.js';
+
 //muestra de la data original para funcion filter
 const muestraData = [
   {

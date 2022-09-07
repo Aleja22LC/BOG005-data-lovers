@@ -1,4 +1,5 @@
 //...funciones (filter-sort-compute)...
+
 //filtrar por tipo de medalla
 export function filtrarMedallas(tipoMedalla, data) {
   const medallas = data.filter(function (datoMedalla) {
@@ -23,7 +24,6 @@ export function filtrarGenero(tipoGenero, data) {
   return mof;
 }
 
-
 //ordenar los paises participantes de la A-Z y de la Z-A
 export function ordenarPaises(opcion, data) {
   const copiaData = [...data]
@@ -46,10 +46,18 @@ export function ordenarPaises(opcion, data) {
 }
 
 //funcion calcular
-// export function calcularXMedallas (medal,data) {
-//   const porcentajeMedallas = filtrarMedallas(tipoMedalla, data)
-//   const porcentaje = Math.round((porcentajeMedallas.length/data.length)*100)
-//   return porcentaje
+// export const porcentajeMujeres = (data)=> {
+//   let dataMujer = 0;
+//     data.map((index) => {
+//         if (index.gender === "F") {
+//             dataMujer++;
+//         }
+//     })
+
+//     let porciento = (dataMujer * 100) / data.length;
+//     let result = Number(porciento.toFixed(2));
+
+//     return result;
 // }
 
 
