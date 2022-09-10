@@ -272,7 +272,7 @@ label, .buscador{
 }
 
 .listaPaises{
-    background-image: url(/src/img/mapamundi.png) ;
+    background-image: url(img/mapamundi.png) ;
 }
 .buscar1 {
     border-radius: 10px;
@@ -283,7 +283,7 @@ label, .buscador{
     
 }
 .buscar1::placeholder {
-    background-image: url(/src/img/buscarPais.png);
+    background-image: url(img/buscarPais.png);
     background-size: 25px 25px;
     background-position: 95% center;
     background-repeat: no-repeat;
@@ -340,12 +340,12 @@ td {
 }
 /* deportes */
 .deportes1 {
-    background-image: url(/src/img/footer.jpeg);
+    background-image: url(img/footer.jpeg);
 }
 
 /* tabla atletas */
 .container{
-    background-image: url(/src/img/fondoSeccion.jpg);
+    background-image: url(img/fondoSeccion.jpg);
 }
 
 /* pie de pagina */
